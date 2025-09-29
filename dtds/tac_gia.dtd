@@ -1,0 +1,6 @@
+<!ELEMENT authors (author*)>
+<!ELEMENT author (full_name, date_of_birth, avatar)>
+<!ATTLIST author id ID #REQUIRED>
+<!ELEMENT full_name (#PCDATA)>
+<!ELEMENT date_of_birth (#PCDATA)>
+<!ELEMENT avatar (#PCDATA)>

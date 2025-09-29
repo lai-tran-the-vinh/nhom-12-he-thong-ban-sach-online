@@ -1,0 +1,4 @@
+<!ELEMENT genres (genre*)>
+<!ATTLIST genre id ID #REQUIRED>
+<!ELEMENT genre (name)>
+<!ELEMENT name (#PCDATA)>

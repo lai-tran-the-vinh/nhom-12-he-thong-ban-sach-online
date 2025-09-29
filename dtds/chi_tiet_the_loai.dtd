@@ -1,0 +1,4 @@
+<!ELEMENT genres_details (genre_detail*)>
+<!ELEMENT genre_detail EMPTY>
+<!ATTLIST genre_detail genre_id ID #REQUIRED>
+<!ATTLIST genre_detail book_id ID #REQUIRED>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE authors SYSTEM "../dtds/tac_gia.dtd">
+
+<authors>
+    <author id="A001">
+        <full_name>Hồ Anh Thái</full_name>
+        <date_of_birth>1980-01-01</date_of_birth>
+        <avatar>
+            https://cand.com.vn/Files/Image/thanhbinh/2020/05/25/thumb_660_f6a85596-232f-4237-a9e6-48c71c477213.JPG
+        </avatar>
+    </author>
+    <author id="A002">
+        <full_name>Nguyễn Vĩnh Nguyên</full_name>
+        <date_of_birth>1979-05-01</date_of_birth>
+        <avatar> https://www.netabooks.vn/data/author/8331/logo-nguyen-vinh-nguyen.jpg </avatar>
+    </author>
+    <author id="A003">
+        <full_name>Nguyễn Trương Quý</full_name>
+        <date_of_birth>1989-06-04</date_of_birth>
+        <avatar>
+            https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSwn_mokrmX3dECxWh-T-cM0fEggb4_uZPOQ2KVSx-rJBi7ZnxC3Z_gGYicTMdim8jlRf0A7VtaITCMH845X1eBNCdBQImh7gBWE-Gx-Fc_
+        </avatar>
+    </author>
+    <author id="A004">
+        <full_name>Đỗ Bích Thúy</full_name>
+        <date_of_birth>1995-08-05</date_of_birth>
+        <avatar>
+            https://vanvn.vn/wp-content/uploads/2021/03/Do-Bich-Thuy-vanvn.jpg
+        </avatar>
+    </author>
+    <author id="A005">
+        <full_name>Nguyễn Mai Chi</full_name>
+        <date_of_birth>1998-04-09</date_of_birth>
+        <avatar>
+            https://tramvanhoc.com/wp-content/uploads/2024/07/Gioi-thieu-tac-gia-Nguyen-Mai-Chi-Tieu-su-su-nghiep-phong-cach-sang-tac-nhan-dinh.jpg
+        </avatar>
+    </author>
+</authors>

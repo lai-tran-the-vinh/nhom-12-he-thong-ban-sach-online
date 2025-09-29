@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE genres SYSTEM "../dtds/the_loai.dtd">
+
+<genres>
+    <genre id="G001">
+        <name>Tình cảm</name>
+    </genre>
+    <genre id="G002">
+        <name>Tâm lý</name>
+    </genre>
+    <genre id="G003">
+        <name>Học thuật</name>
+    </genre>
+    <genre id="G004">
+        <name>Thiếu nhi</name>
+    </genre>
+    <genre id="G005">
+        <name>Kỹ năng</name>
+    </genre>
+</genres>

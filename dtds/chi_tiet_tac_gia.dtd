@@ -1,0 +1,5 @@
+<!ELEMENT author_details (author_detail*)>
+<!ELEMENT author_detail (role)>
+<!ELEMENT role (#PCDATA)>
+<!ATTLIST author_detail author_id ID #REQUIRED>
+<!ATTLIST author_detail book_id ID #REQUIRED>
