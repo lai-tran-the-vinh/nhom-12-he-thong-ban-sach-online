@@ -1,0 +1,12 @@
+<!ELEMENT addresses (address+)>
+
+<!ELEMENT address (userId, detailed_address, city, ward, default, date)>
+<!ATTLIST address
+    id ID #REQUIRED>
+
+<!ELEMENT userId (#PCDATA)>
+<!ELEMENT detailed_address (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT ward (#PCDATA)>
+<!ELEMENT default (#PCDATA)>
+<!ELEMENT date (#PCDATA)>

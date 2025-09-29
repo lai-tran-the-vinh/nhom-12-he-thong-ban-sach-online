@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE roles SYSTEM "../dtds/vaitro.dtd">
+<roles>
+    <role id="R001">
+        <name>Admin</name>
+    </role>
+    <role id="R002">
+        <name>Manager</name>
+    </role>
+    <role id="R003">
+        <name>Staff</name>
+    </role>
+    <role id="R004">
+        <name>Employee</name>
+    </role>
+    <role id="R005">
+        <name>Customer</name>
+    </role>
+</roles>

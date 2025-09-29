@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE addresses SYSTEM "../dtds/dia_chi.dtd">
+<addresses>
+    <address id="A001">
+        <userId>U001</userId>
+        <detailed_address>123 Đường A</detailed_address>
+        <city>Hà Nội</city>
+        <ward>Phúc Xá</ward>
+        <default>true</default>
+        <date> 2024-06-15 </date>
+    </address>
+    <address id="A002">
+        <userId>U002</userId>
+        <detailed_address>456 Đường B</detailed_address>
+        <city>Hồ Chí Minh</city>
+        <ward>Phú Mỹ Hưng</ward>
+        <default>false</default>
+        <date> 2024-06-15 </date>
+    </address>
+    <address id="A003">
+        <userId>U005</userId>
+        <detailed_address>789 Đường C</detailed_address>
+        <city>Đà Nẵng</city>
+        <ward>Hòa Cường Bắc</ward>
+        <default>true</default>
+        <date> 2024-06-15 </date>
+    </address>
+
+    <address id="A004">
+        <userId>U005</userId>
+        <detailed_address>101 Đường D</detailed_address>
+        <city>Cần Thơ</city>
+        <ward>An Bình</ward>
+        <default>false</default>
+        <date> 2024-06-15 </date>
+    </address>
+
+    <address id="A005">
+        <userId>U005</userId>
+        <detailed_address>202 Đường E</detailed_address>
+        <city>Hải Phòng</city>
+        <ward>Đằng Lâm</ward>
+        <default>false</default>
+        <date> 2024-06-15 </date>
+    </address>
+</addresses>

@@ -1,0 +1,12 @@
+<!ELEMENT users (user+)>
+
+<!ELEMENT user (username, password, numberphone, email, gender, roleId)>
+<!ATTLIST user
+    id ID #REQUIRED>
+
+<!ELEMENT username (#PCDATA)>
+<!ELEMENT password (#PCDATA)>
+<!ELEMENT numberphone (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT gender (#PCDATA)>
+<!ELEMENT roleId (#PCDATA)>
