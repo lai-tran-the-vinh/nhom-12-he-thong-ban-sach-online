@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE genres_details SYSTEM "../dtds/chi_tiet_the_loai.dtd">
+
+<genres_details>
+    <genre_detail genre_id="G001" book_id="B002" />
+    <genre_detail genre_id="G002" book_id="B002" />
+    <genre_detail genre_id="G003" book_id="B002" />
+    <genre_detail genre_id="G004" book_id="B002" />
+    <genre_detail genre_id="G005" book_id="B002" />
+    <genre_detail genre_id="G006" book_id="B002" />
+    <genre_detail genre_id="G007" book_id="B002" />
+</genres_details>

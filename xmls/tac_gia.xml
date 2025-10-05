@@ -24,15 +24,28 @@
     <author id="A004">
         <full_name>Đỗ Bích Thúy</full_name>
         <date_of_birth>1995-08-05</date_of_birth>
-        <avatar>
-            https://vanvn.vn/wp-content/uploads/2021/03/Do-Bich-Thuy-vanvn.jpg
-        </avatar>
+        <avatar> https://vanvn.vn/wp-content/uploads/2021/03/Do-Bich-Thuy-vanvn.jpg </avatar>
     </author>
     <author id="A005">
         <full_name>Nguyễn Mai Chi</full_name>
         <date_of_birth>1998-04-09</date_of_birth>
         <avatar>
             https://tramvanhoc.com/wp-content/uploads/2024/07/Gioi-thieu-tac-gia-Nguyen-Mai-Chi-Tieu-su-su-nghiep-phong-cach-sang-tac-nhan-dinh.jpg
+        </avatar>
+    </author>
+
+    <author id="A006">
+        <full_name>Anthony Burgess</full_name>
+        <date_of_birth>1917-02-25</date_of_birth>
+        <avatar>
+            https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRjIEQi65pbyd1sAhVTuuLq1986APk5D_7iw&amp;s
+        </avatar>
+    </author>
+    <author id="A007">
+        <full_name>Maya Angelou</full_name>
+        <date_of_birth>1928-04-04</date_of_birth>
+        <avatar>
+            https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRjjVutIhtrkRs86P8HcPKZm1-gmlb0xexI7ZPTed7g61BZr2lcJBkwAMKdP0x9WSGgVRml-6TU1J3IDcmpTw_KPbxgZnHBEY4trfPRBhDt1w
         </avatar>
     </author>
 </authors>
