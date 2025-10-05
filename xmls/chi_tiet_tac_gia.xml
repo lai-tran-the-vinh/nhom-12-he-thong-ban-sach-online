@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE author_details SYSTEM "../dtds/chi_tiet_tac_gia.dtd">
+
+<author_details>
+    <author_detail author_id="A006" book_id="B003">
+        <role>Chủ biên</role>
+    </author_detail>
+    <author_detail author_id="A005" book_id="B003">
+        <role>Thành viên</role>
+    </author_detail>
+    <author_detail author_id="A004" book_id="B003">
+        <role>Chủ biên</role>
+    </author_detail>
+    <author_detail author_id="A003" book_id="B003">
+        <role>Thành viên</role>
+    </author_detail>
+    <author_detail author_id="A002" book_id="B003">
+        <role>Chủ biên</role>
+    </author_detail>
+    <author_detail author_id="A001" book_id="B003">
+        <role>Chủ biên</role>
+    </author_detail>
+</author_details>

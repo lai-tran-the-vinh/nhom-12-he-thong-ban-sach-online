@@ -17,4 +17,13 @@
     <genre id="G005">
         <name>Kỹ năng</name>
     </genre>
+    <genre id="G006">
+        <name>Tiểu thuyết</name>
+    </genre>
+    <genre id="G007">
+        <name>Tài chính</name>
+    </genre>
+    <genre id="G008">
+        <name>Kinh doanh</name>
+    </genre>
 </genres>
