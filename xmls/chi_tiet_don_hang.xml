@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE order_details SYSTEM "../dtds/chi_tiet_don_hang.dtd">
+
+<order_details>
+    <list_order_detail>
+        <order_detail id="OD001" order_id="O001" book_id="B001">
+            <quantity>2</quantity>
+            <unit_price>25.00</unit_price>
+        </order_detail>
+
+        <order_detail id="OD002" order_id="O001" book_id="B002">
+            <quantity>1</quantity>
+            <unit_price>100.75</unit_price>
+        </order_detail>
+
+        <order_detail id="OD003" order_id="O002" book_id="B003">
+            <quantity>3</quantity>
+            <unit_price>29.83</unit_price>
+        </order_detail>
+
+        <order_detail id="OD004" order_id="O002" book_id="B003">
+            <quantity>3</quantity>
+            <unit_price>29.83</unit_price>
+        </order_detail>
+
+        <order_detail id="OD005" order_id="O003" book_id="B004">
+            <quantity>1</quantity>
+            <unit_price>45.00</unit_price>
+        </order_detail>
+
+        <order_detail id="OD006" order_id="O004" book_id="B005">
+            <quantity>4</quantity>
+            <unit_price>30.00</unit_price>
+        </order_detail>
+
+        <order_detail id="OD007" order_id="O005" book_id="B006">
+            <quantity>2</quantity>
+            <unit_price>60.00</unit_price>
+        </order_detail>
+    </list_order_detail>
+
+    <list_orders>
+        <order id="O001" customer_id="U001"/>
+        <order id="O002" customer_id="U002"/>
+        <order id="O003" customer_id="U003"/>
+        <order id="O004" customer_id="U003"/>
+        <order id="O005" customer_id="U004"/>
+    </list_orders>
+
+    <list_customers>
+        <customer id="U001"/>
+        <customer id="U002"/>
+        <customer id="U003"/>
+        <customer id="U004"/>
+        <customer id="U005"/>
+        <customer id="U006"/>
+        <customer id="U007">
+    </list_customers>
+
+    <list_book>
+        <book id="B001"/>
+        <book id="B002"/>
+        <book id="B003"/>
+        <book id="B004"/>
+        <book id="B005"/>
+        <book id="B006"/>
+        <book id="B007"/>
+    </list_book>
+</order_details>

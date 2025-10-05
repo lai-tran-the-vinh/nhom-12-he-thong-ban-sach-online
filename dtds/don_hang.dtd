@@ -1,0 +1,18 @@
+<!ELEMENT orders (list_orders, customers)>
+<!ELEMENT list_orders (order+)>
+<!ELEMENT order (customer_name, tel, order_date, status, address, payment_method, discount, total_amount, note?)>
+<!ATTLIST order id ID #REQUIRED>
+<!ATTLIST order customer_id IDREF #REQUIRED>
+<!ELEMENT customer_name (#PCDATA)>
+<!ELEMENT tel (#PCDATA)>
+<!ELEMENT order_date (#PCDATA)>
+<!ELEMENT status (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT payment_method (#PCDATA)>
+<!ELEMENT discount (#PCDATA)>
+<!ELEMENT total_amount (#PCDATA)>
+<!ELEMENT note (#PCDATA)>
+
+<!ELEMENT customers (customer+)>
+<!ELEMENT customer EMPTY>
+<!ATTLIST customer id ID #REQUIRED>

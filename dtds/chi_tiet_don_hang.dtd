@@ -1,0 +1,18 @@
+<!ELEMENT order_details (list_order_detail, list_orders, list_customers)>
+<!ELEMENT list_order_detail (order_detail+)>
+<!ELEMENT order_detail (quantity, unit_price)>
+<!ATTLIST order_detail id ID #REQUIRED>
+<!ATTLIST order_detail order_id IDREF #REQUIRED>
+<!ATTLIST order_detail book_id IDREF #REQUIRED>
+<!ELEMENT quantity (#PCDATA)>
+<!ELEMENT unit_price (#PCDATA)>
+<!ELEMENT list_orders (order+)>
+<!ELEMENT order EMPTY>
+<!ATTLIST order id ID #REQUIRED>
+<!ATTLIST order customer_id IDREF #REQUIRED>
+<!ELEMENT list_customers (customer+)>
+<!ELEMENT customer EMPTY>
+<!ATTLIST customer id ID #REQUIRED>
+<!ELEMENT list_book (book+)>
+<!ELEMENT book EMPTY>
+<!ATTLIST book id ID #REQUIRED>
