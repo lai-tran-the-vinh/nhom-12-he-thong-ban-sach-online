@@ -1,4 +1,0 @@
-<!ELEMENT roles (role+)>
-<!ELEMENT role (name)>
-<!ATTLIST role id ID #REQUIRED>
-<!ELEMENT name (#PCDATA)>

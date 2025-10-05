@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root SYSTEM "./root.dtd">
+
+<root>
+    <!-- Book entity -->
+    <books>
+        <book id="B001">
+            <title>XML Developer's Guide</title>
+            <page_count>352</page_count>
+            <price>44.95</price>
+            <publish_year>2000</publish_year>
+            <description>An in-depth look at creating applications
+                with XML.</description>
+            <thumbnail>xml_developer_guide.jpg</thumbnail>
+            <available>true</available>
+        </book>
+
+        <book id="B002">
+            <title>Midnight Rain</title>
+            <page_count>256</page_count>
+            <price>5.95</price>
+            <publish_year>2001</publish_year>
+            <description>A former architect battles corporate zombies,
+                an evil sorceress, and her own childhood to become queen
+                of the world.</description>
+            <thumbnail>midnight_rain.jpg</thumbnail>
+            <available>true</available>
+        </book>
+
+        <book id="B003">
+            <title>Maeve Ascendant</title>
+            <page_count>272</page_count>
+            <price>5.95</price>
+            <publish_year>2000</publish_year>
+            <description>After the collapse of a nanotechnology
+                society in England, the young survivors lay the
+                foundation for a new society.</description>
+            <thumbnail>maeve_ascendant.jpg</thumbnail>
+            <available>false</available>
+        </book>
+
+        <book id="B004">
+            <title>Oberon's Legacy</title>
+            <page_count>300</page_count>
+            <price>5.95</price>
+            <publish_year>2001</publish_year>
+            <description>In post-apocalypse England, the mysterious
+                agent known only as Oberon helps to create a new life
+                for the inhabitants of London. Sequel to Maeve
+                Ascendant.</description>
+            <thumbnail>oberons_legacy.jpg</thumbnail>
+            <available>true</available>
+        </book>
+
+        <book id="B005">
+            <title>The Sundered Grail</title>
+            <page_count>400</page_count>
+            <price>5.95</price>
+            <publish_year>2001</publish_year>
+            <description>The two daughters of Maeve, half-sisters,
+                battle one another for control of England. Sequel to
+                Oberon's Legacy.</description>
+            <thumbnail>sundered_grail.jpg</thumbnail>
+            <available>false</available>
+        </book>
+
+        <book id="B006">
+            <title>Lover Birds</title>
+            <page_count>150</page_count>
+            <price>4.95</price>
+            <publish_year>2000</publish_year>
+            <description>When Carla meets Paul at an ornithology
+                conference, tempers fly as feathers get ruffled.</description>
+            <thumbnail>lover_birds.jpg</thumbnail>
+            <available>true</available>
+        </book>
+
+        <book id="B007">
+            <title>Splish Splash</title>
+            <page_count>200</page_count>
+            <price>4.95</price>
+            <publish_year>2000</publish_year>
+            <description>A deep sea diver finds true love twenty
+                thousand leagues beneath the sea.</description>
+            <thumbnail>splish_splash.jpg</thumbnail>
+            <available>true</available>
+        </book>
+    </books>
+
+    <!-- Author entity -->
+    <authors>
+        <author id="AU001">
+            <full_name>Hồ Anh Thái</full_name>
+            <date_of_birth>1980-01-01</date_of_birth>
+            <avatar>
+                https://cand.com.vn/Files/Image/thanhbinh/2020/05/25/thumb_660_f6a85596-232f-4237-a9e6-48c71c477213.JPG
+            </avatar>
+        </author>
+        <author id="AU002">
+            <full_name>Nguyễn Vĩnh Nguyên</full_name>
+            <date_of_birth>1979-05-01</date_of_birth>
+            <avatar> https://www.netabooks.vn/data/author/8331/logo-nguyen-vinh-nguyen.jpg </avatar>
+        </author>
+        <author id="AU003">
+            <full_name>Nguyễn Trương Quý</full_name>
+            <date_of_birth>1989-06-04</date_of_birth>
+            <avatar>
+                https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSwn_mokrmX3dECxWh-T-cM0fEggb4_uZPOQ2KVSx-rJBi7ZnxC3Z_gGYicTMdim8jlRf0A7VtaITCMH845X1eBNCdBQImh7gBWE-Gx-Fc_
+            </avatar>
+        </author>
+        <author id="AU004">
+            <full_name>Đỗ Bích Thúy</full_name>
+            <date_of_birth>1995-08-05</date_of_birth>
+            <avatar> https://vanvn.vn/wp-content/uploads/2021/03/Do-Bich-Thuy-vanvn.jpg </avatar>
+        </author>
+        <author id="AU005">
+            <full_name>Nguyễn Mai Chi</full_name>
+            <date_of_birth>1998-04-09</date_of_birth>
+            <avatar>
+                https://tramvanhoc.com/wp-content/uploads/2024/07/Gioi-thieu-tac-gia-Nguyen-Mai-Chi-Tieu-su-su-nghiep-phong-cach-sang-tac-nhan-dinh.jpg
+            </avatar>
+        </author>
+
+        <author id="AU006">
+            <full_name>Anthony Burgess</full_name>
+            <date_of_birth>1917-02-25</date_of_birth>
+            <avatar>
+                https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRjIEQi65pbyd1sAhVTuuLq1986APk5D_7iw&amp;s
+            </avatar>
+        </author>
+        <author id="AU007">
+            <full_name>Maya Angelou</full_name>
+            <date_of_birth>1928-04-04</date_of_birth>
+            <avatar>
+                https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRjjVutIhtrkRs86P8HcPKZm1-gmlb0xexI7ZPTed7g61BZr2lcJBkwAMKdP0x9WSGgVRml-6TU1J3IDcmpTw_KPbxgZnHBEY4trfPRBhDt1w
+            </avatar>
+        </author>
+    </authors>
+
+    <!-- Genre entity -->
+    <genres>
+        <genre id="G001">
+            <genre_name>Tình cảm</genre_name>
+        </genre>
+        <genre id="G002">
+            <genre_name>Tâm lý</genre_name>
+        </genre>
+        <genre id="G003">
+            <genre_name>Học thuật</genre_name>
+        </genre>
+        <genre id="G004">
+            <genre_name>Thiếu nhi</genre_name>
+        </genre>
+        <genre id="G005">
+            <genre_name>Kỹ năng</genre_name>
+        </genre>
+        <genre id="G006">
+            <genre_name>Tiểu thuyết</genre_name>
+        </genre>
+        <genre id="G007">
+            <genre_name>Tài chính</genre_name>
+        </genre>
+        <genre id="G008">
+            <genre_name>Kinh doanh</genre_name>
+        </genre>
+    </genres>
+
+    <!-- Role entity -->
+    <roles>
+        <role id="R001">
+            <role_name>Admin</role_name>
+        </role>
+        <role id="R002">
+            <role_name>Manager</role_name>
+        </role>
+        <role id="R003">
+            <role_name>Staff</role_name>
+        </role>
+        <role id="R004">
+            <role_name>Employee</role_name>
+        </role>
+        <role id="R005">
+            <role_name>Customer</role_name>
+        </role>
+    </roles>
+
+    <!-- User entity -->
+    <users>
+        <user id="U001">
+            <username>Lại Trần Thế Vinh</username>
+            <password>12345</password>
+            <numberphone>0907435567</numberphone>
+            <email>vinhltth@gmail.com</email>
+            <gender>Nam</gender>
+            <roleId>R001</roleId>
+        </user>
+        <user id="U002">
+            <username>Võ Quốc Việt</username>
+            <password>12345</password>
+            <numberphone>0907313461</numberphone>
+            <email>vietvq@gmail.com</email>
+            <gender>Nam</gender>
+            <roleId>R002</roleId>
+        </user>
+        <user id="U003">
+            <username>Dương Thành Trí</username>
+            <password>12345</password>
+            <numberphone>0907313462</numberphone>
+            <email>dtt@gmail.com</email>
+            <gender>Nam</gender>
+            <roleId>R003</roleId>
+        </user>
+        <user id="U004">
+            <username>Danh Nhật Tiến</username>
+            <password>12345</password>
+            <numberphone>0907313463</numberphone>
+            <email>dnt@gmail.com</email>
+            <gender>Nam</gender>
+            <roleId>R004</roleId>
+        </user>
+        <user id="U005">
+            <username>Trần Quang Minh</username>
+            <password>12345</password>
+            <numberphone>0907313464</numberphone>
+            <email>cqm@gmail.com</email>
+            <gender>Nam</gender>
+            <roleId>R005</roleId>
+        </user>
+    </users>
+
+    <!-- Order entity -->
+    <orders>
+        <order id="O001" customer_id="U001">
+            <customer_name>John Doe</customer_name>
+            <tel>0123456789</tel>
+            <order_date>2024-06-15</order_date>
+            <status>Processing</status>
+            <order_address>123 Main St, Anytown, USA</order_address>
+            <payment_method>Credit Card</payment_method>
+            <discount>10.4</discount>
+            <total_amount>150.75</total_amount>
+            <note>Please deliver between 9 AM and 5 PM.</note>
+        </order>
+
+        <order id="O002" customer_id="U002">
+            <customer_name>Jane Smith</customer_name>
+            <tel>9876543210</tel>
+            <order_date>2024-06-16</order_date>
+            <status>Shipped</status>
+            <order_address>456 Elm St, Othertown, USA</order_address>
+            <payment_method>PayPal</payment_method>
+            <discount>5.0</discount>
+            <total_amount>89.50</total_amount>
+        </order>
+
+        <order id="O003" customer_id="U003">
+            <customer_name>Emily Johnson</customer_name>
+            <tel>0123456789</tel>
+            <order_date>2024-06-17</order_date>
+            <status>Delivered</status>
+            <order_address>789 Oak St, Sometown, USA</order_address>
+            <payment_method>Credit Card</payment_method>
+            <discount>0.0</discount>
+            <total_amount>45.00</total_amount>
+        </order>
+
+        <order id="O004" customer_id="U003">
+            <customer_name>Michael Brown</customer_name>
+            <tel>0123456789</tel>
+            <order_date>2024-06-18</order_date>
+            <status>Cancelled</status>
+            <order_address>321 Pine St, Anycity, USA</order_address>
+            <payment_method>Credit Card</payment_method>
+            <discount>15.0</discount>
+            <total_amount>120.00</total_amount>
+        </order>
+
+        <order id="O005" customer_id="U004">
+            <customer_name>Sarah Davis</customer_name>
+            <tel>0123456789</tel>
+            <order_date>2024-06-19</order_date>
+            <status>Processing</status>
+            <order_address>654 Maple St, Anycity, USA</order_address>
+            <payment_method>Credit Card</payment_method>
+            <discount>10.0</discount>
+            <total_amount>75.25</total_amount>
+        </order>
+
+        <order id="O006" customer_id="U005">
+            <customer_name>David Wilson</customer_name>
+            <tel>0123456789</tel>
+            <order_date>2024-06-20</order_date>
+            <status>Processing</status>
+            <order_address>987 Cedar St, Anycity, USA</order_address>
+            <payment_method>Credit Card</payment_method>
+            <discount>0.0</discount>
+            <total_amount>200.00</total_amount>
+        </order>
+
+        <order id="O007" customer_id="U005">
+            <customer_name>Laura Martinez</customer_name>
+            <tel>0123456789</tel>
+            <order_date>2024-06-21</order_date>
+            <status>Processing</status>
+            <order_address>123 Birch St, Anycity, USA</order_address>
+            <payment_method>Credit Card</payment_method>
+            <discount>20.0</discount>
+            <total_amount>300.00</total_amount>
+        </order>
+    </orders>
+
+    <!-- Address entity -->
+    <addresses>
+        <address id="A001" user_id="U005">
+            <detailed_address>123 Đường A</detailed_address>
+            <city>Hà Nội</city>
+            <ward>Phúc Xá</ward>
+            <default>true</default>
+            <created_date> 2024-06-15 </created_date>
+        </address>
+        <address id="A002" user_id="U004">
+            <detailed_address>456 Đường B</detailed_address>
+            <city>Hồ Chí Minh</city>
+            <ward>Phú Mỹ Hưng</ward>
+            <default>false</default>
+            <created_date> 2024-06-15 </created_date>
+        </address>
+        <address id="A003" user_id="U003">
+            <detailed_address>789 Đường C</detailed_address>
+            <city>Đà Nẵng</city>
+            <ward>Hòa Cường Bắc</ward>
+            <default>true</default>
+            <created_date> 2024-06-15 </created_date>
+        </address>
+
+        <address id="A004" user_id="U002">
+            <detailed_address>101 Đường D</detailed_address>
+            <city>Cần Thơ</city>
+            <ward>An Bình</ward>
+            <default>false</default>
+            <created_date> 2024-06-15 </created_date>
+        </address>
+
+        <address id="A005" user_id="U001">
+            <detailed_address>202 Đường E</detailed_address>
+            <city>Hải Phòng</city>
+            <ward>Đằng Lâm</ward>
+            <default>false</default>
+            <created_date> 2024-06-15 </created_date>
+        </address>
+    </addresses>
+
+    <!-- Review entity -->
+    <reviews>
+        <review id="RV001">
+            <userId>U005</userId>
+            <productId>P001</productId>
+            <rating>5</rating>
+            <comment>Sản phẩm rất tốt!</comment>
+        </review>
+        <review id="RV002">
+            <userId>U003</userId>
+            <productId>P002</productId>
+            <rating>4</rating>
+            <comment>Chất lượng ổn, giao hàng nhanh.</comment>
+            <date>2024-06-15</date>
+        </review>
+        <review id="RV003">
+            <userId>U005</userId>
+            <productId>P003</productId>
+            <rating>3</rating>
+            <comment>Sản phẩm bình thường, không có gì đặc biệt.</comment>
+            <date>2024-06-15</date>
+        </review>
+        <review id="RV004">
+            <userId>U003</userId>
+            <productId>P004</productId>
+            <rating>2</rating>
+            <comment>Chất lượng không như mong đợi.</comment>
+            <date>2024-06-15</date>
+        </review>
+        <review id="RV005">
+            <userId>U001</userId>
+            <productId>P005</productId>
+            <rating>1</rating>
+            <comment>Rất thất vọng với sản phẩm này.</comment>
+            <date>2024-06-15</date>
+        </review>
+    </reviews>
+
+    <!-- Genre detail entity -->
+    <genre_details>
+        <genre_detail genre_id="G001" book_id="B002" />
+        <genre_detail genre_id="G002" book_id="B002" />
+        <genre_detail genre_id="G003" book_id="B002" />
+        <genre_detail genre_id="G004" book_id="B002" />
+        <genre_detail genre_id="G005" book_id="B002" />
+        <genre_detail genre_id="G006" book_id="B002" />
+        <genre_detail genre_id="G007" book_id="B002" />
+    </genre_details>
+
+    <!-- Author detail entity -->
+    <author_details>
+        <author_detail author_id="AU006" book_id="B003">
+            <author_role>Chủ biên</author_role>
+        </author_detail>
+        <author_detail author_id="AU005" book_id="B003">
+            <author_role>Thành viên</author_role>
+        </author_detail>
+        <author_detail author_id="AU004" book_id="B003">
+            <author_role>Chủ biên</author_role>
+        </author_detail>
+        <author_detail author_id="AU003" book_id="B003">
+            <author_role>Thành viên</author_role>
+        </author_detail>
+        <author_detail author_id="AU002" book_id="B003">
+            <author_role>Chủ biên</author_role>
+        </author_detail>
+        <author_detail author_id="AU001" book_id="B003">
+            <author_role>Chủ biên</author_role>
+        </author_detail>
+    </author_details>
+
+    <!-- Order detail entity -->
+    <order_details>
+        <order_detail id="OD001" order_id="O001" book_id="B001">
+            <quantity>2</quantity>
+            <unit_price>25.00</unit_price>
+        </order_detail>
+
+        <order_detail id="OD002" order_id="O001" book_id="B002">
+            <quantity>1</quantity>
+            <unit_price>100.75</unit_price>
+        </order_detail>
+
+        <order_detail id="OD003" order_id="O002" book_id="B003">
+            <quantity>3</quantity>
+            <unit_price>29.83</unit_price>
+        </order_detail>
+
+        <order_detail id="OD004" order_id="O002" book_id="B003">
+            <quantity>3</quantity>
+            <unit_price>29.83</unit_price>
+        </order_detail>
+
+        <order_detail id="OD005" order_id="O003" book_id="B004">
+            <quantity>1</quantity>
+            <unit_price>45.00</unit_price>
+        </order_detail>
+
+        <order_detail id="OD006" order_id="O004" book_id="B005">
+            <quantity>4</quantity>
+            <unit_price>30.00</unit_price>
+        </order_detail>
+
+        <order_detail id="OD007" order_id="O005" book_id="B006">
+            <quantity>2</quantity>
+            <unit_price>60.00</unit_price>
+        </order_detail>
+    </order_details>
+</root>
