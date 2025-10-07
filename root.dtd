@@ -2,11 +2,12 @@
 
 <!-- Book's DTD -->
 <!ELEMENT books (book+)>
-<!ELEMENT book (title, page_count, price, publish_year, description, thumbnail, available)>
+<!ELEMENT book (title, page_count, price, amount, publish_year, description, thumbnail, available)>
 <!ATTLIST book id ID #REQUIRED>
 <!ELEMENT title (#PCDATA)>
 <!ELEMENT page_count (#PCDATA)>
 <!ELEMENT price (#PCDATA)>
+<!ELEMENT amount (#PCDATA)>
 <!ELEMENT publish_year (#PCDATA)>
 <!ELEMENT description (#PCDATA)>
 <!ELEMENT thumbnail (#PCDATA)>
@@ -35,8 +36,8 @@
 <!-- User's DTD -->
 <!ELEMENT users (user+)>
 
-<!ELEMENT user (username, password, numberphone, email, gender, roleId)>
-<!ATTLIST user id ID #REQUIRED>
+<!ELEMENT user (username, password, numberphone, email, gender)>
+<!ATTLIST user id ID #REQUIRED role_id IDREF #REQUIRED>
 <!ELEMENT username (#PCDATA)>
 <!ELEMENT password (#PCDATA)>
 <!ELEMENT numberphone (#PCDATA)>
@@ -75,10 +76,8 @@
 
 <!-- Review's DTD -->
 <!ELEMENT reviews (review+)>
-<!ELEMENT review (userId, productId, rating, comment, date?)>
-<!ATTLIST review id ID #REQUIRED>
-<!ELEMENT userId (#PCDATA)>
-<!ELEMENT productId (#PCDATA)>
+<!ELEMENT review (rating, comment, date?)>
+<!ATTLIST review id ID #REQUIRED book_id IDREF #REQUIRED user_id IDREF #REQUIRED>
 <!ELEMENT rating (#PCDATA)>
 <!ELEMENT comment (#PCDATA)>
 <!ELEMENT date (#PCDATA)>

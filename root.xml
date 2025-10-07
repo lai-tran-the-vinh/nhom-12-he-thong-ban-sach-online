@@ -8,6 +8,7 @@
             <title>Hướng dẫn dành cho Nhà phát triển XML</title>
             <page_count>352</page_count>
             <price>44.95</price>
+            <amount>20</amount>
             <publish_year>2000</publish_year>
             <description>Cái nhìn chuyên sâu về việc tạo ứng dụng với XML.</description>
             <thumbnail>xml_developer_guide.jpg</thumbnail>
@@ -18,6 +19,7 @@
             <title>Cơn mưa lúc nửa đêm</title>
             <page_count>256</page_count>
             <price>5.95</price>
+            <amount>30</amount>
             <publish_year>2001</publish_year>
             <description>Một cựu kiến trúc sư chiến đấu chống lại xác sống công ty, một phù thủy độc
                 ác, và tuổi thơ của chính mình để trở thành nữ hoàng của thế giới.</description>
@@ -29,29 +31,32 @@
             <title>Maeve Thăng Thiên</title>
             <page_count>272</page_count>
             <price>5.95</price>
+            <amount>5</amount>
             <publish_year>2000</publish_year>
             <description>Sau sự sụp đổ của một xã hội công nghệ nano ở Anh, những người sống sót trẻ
                 tuổi đặt nền móng cho một xã hội mới.</description>
             <thumbnail>maeve_ascendant.jpg</thumbnail>
-            <available>false</available>
+            <available>true</available>
         </book>
 
         <book id="B004">
             <title>Di sản của Oberon</title>
             <page_count>300</page_count>
             <price>5.95</price>
+            <amount>0</amount>
             <publish_year>2001</publish_year>
             <description>Tại nước Anh thời hậu tận thế, đặc vụ bí ẩn chỉ được biết đến với tên
                 Oberon giúp tạo ra một cuộc sống mới cho cư dân London. Phần tiếp theo của Maeve
                 Thăng Thiên.</description>
             <thumbnail>oberons_legacy.jpg</thumbnail>
-            <available>true</available>
+            <available>false</available>
         </book>
 
         <book id="B005">
             <title>Chén Thánh Phân Chia</title>
             <page_count>400</page_count>
             <price>5.95</price>
+            <amount>0</amount>
             <publish_year>2001</publish_year>
             <description>Hai cô con gái của Maeve, hai chị em cùng cha khác mẹ, chiến đấu với nhau
                 để giành quyền kiểm soát nước Anh. Phần tiếp theo của Di sản của Oberon.</description>
@@ -63,6 +68,7 @@
             <title>Những chú chim tình nhân</title>
             <page_count>150</page_count>
             <price>4.95</price>
+            <amount>15</amount>
             <publish_year>2000</publish_year>
             <description>Khi Carla gặp Paul tại một hội nghị nghiên cứu chim, căng thẳng tăng cao
                 khi có xích mích.</description>
@@ -74,6 +80,7 @@
             <title>Tung tóe</title>
             <page_count>200</page_count>
             <price>4.95</price>
+            <amount>8</amount>
             <publish_year>2000</publish_year>
             <description>Một thợ lặn biển sâu tìm thấy tình yêu đích thực hai mươi ngàn dặm dưới đáy
                 biển.</description>
@@ -178,45 +185,40 @@
 
     <!-- User entity -->
     <users>
-        <user id="U001">
+        <user id="U001" role_id="R001">
             <username>Lại Trần Thế Vinh</username>
             <password>12345</password>
             <numberphone>0907435567</numberphone>
             <email>vinhltth@gmail.com</email>
             <gender>Nam</gender>
-            <roleId>R001</roleId>
         </user>
-        <user id="U002">
+        <user id="U002" role_id="R002">
             <username>Võ Quốc Việt</username>
             <password>12345</password>
             <numberphone>0907313461</numberphone>
             <email>vietvq@gmail.com</email>
             <gender>Nam</gender>
-            <roleId>R002</roleId>
         </user>
-        <user id="U003">
+        <user id="U003" role_id="R003">
             <username>Dương Thành Trí</username>
             <password>12345</password>
             <numberphone>0907313462</numberphone>
             <email>dtt@gmail.com</email>
             <gender>Nam</gender>
-            <roleId>R003</roleId>
         </user>
-        <user id="U004">
+        <user id="U004" role_id="R004">
             <username>Danh Nhật Tiến</username>
             <password>12345</password>
             <numberphone>0907313463</numberphone>
             <email>dnt@gmail.com</email>
             <gender>Nam</gender>
-            <roleId>R004</roleId>
         </user>
-        <user id="U005">
+        <user id="U005" role_id="R004">
             <username>Trần Quang Minh</username>
             <password>12345</password>
             <numberphone>0907313464</numberphone>
             <email>cqm@gmail.com</email>
             <gender>Nam</gender>
-            <roleId>R005</roleId>
         </user>
     </users>
 
@@ -344,36 +346,27 @@
 
     <!-- Review entity -->
     <reviews>
-        <review id="RV001">
-            <userId>U005</userId>
-            <productId>P001</productId>
+        <review id="RV001" book_id="B001" user_id="U005">
             <rating>5</rating>
             <comment>Sản phẩm rất tốt!</comment>
+            <date>2024-06-15</date>
         </review>
-        <review id="RV002">
-            <userId>U003</userId>
-            <productId>P002</productId>
+        <review id="RV002" book_id="B002" user_id="U003">
             <rating>4</rating>
             <comment>Chất lượng ổn, giao hàng nhanh.</comment>
             <date>2024-06-15</date>
         </review>
-        <review id="RV003">
-            <userId>U005</userId>
-            <productId>P003</productId>
+        <review id="RV003" book_id="B003" user_id="U005">
             <rating>3</rating>
             <comment>Sản phẩm bình thường, không có gì đặc biệt.</comment>
             <date>2024-06-15</date>
         </review>
-        <review id="RV004">
-            <userId>U003</userId>
-            <productId>P004</productId>
+        <review id="RV004" book_id="B004" user_id="U003">
             <rating>2</rating>
             <comment>Chất lượng không như mong đợi.</comment>
             <date>2024-06-15</date>
         </review>
-        <review id="RV005">
-            <userId>U001</userId>
-            <productId>P005</productId>
+        <review id="RV005" book_id="B005" user_id="U002">
             <rating>1</rating>
             <comment>Rất thất vọng với sản phẩm này.</comment>
             <date>2024-06-15</date>
