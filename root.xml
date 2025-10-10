@@ -2,7 +2,7 @@
 <!DOCTYPE root SYSTEM "./root.dtd">
 
 <root>
-    <!-- Book entity -->
+    <!-- Book enitity (Thành Trí) -->
     <books>
         <book id="B001">
             <title>Hướng dẫn dành cho Nhà phát triển XML</title>
@@ -89,7 +89,7 @@
         </book>
     </books>
 
-    <!-- Author entity -->
+    <!-- Author entity (Thế Vinh) -->
     <authors>
         <author id="AU001">
             <full_name>Hồ Anh Thái</full_name>
@@ -139,7 +139,7 @@
         </author>
     </authors>
 
-    <!-- Genre entity -->
+    <!-- Genre entity (Thế Vinh) -->
     <genres>
         <genre id="G001">
             <genre_name>Tình cảm</genre_name>
@@ -167,7 +167,7 @@
         </genre>
     </genres>
 
-    <!-- Role entity -->
+    <!-- Role entity (Quốc Việt) -->
     <roles>
         <role id="R001">
             <role_name>Quản trị viên</role_name>
@@ -183,7 +183,7 @@
         </role>
     </roles>
 
-    <!-- User entity -->
+    <!-- User entity (Quốc Việt) -->
     <users>
         <user id="U001" role_id="R001">
             <username>Lại Trần Thế Vinh</username>
@@ -222,7 +222,7 @@
         </user>
     </users>
 
-    <!-- Order entity -->
+    <!-- Order entity (Thành Trí) -->
     <orders>
         <order id="O001" customer_id="U001">
             <customer_name>Nguyễn Văn A</customer_name>
@@ -303,7 +303,7 @@
         </order>
     </orders>
 
-    <!-- Address entity -->
+    <!-- Address entity (Quốc Việt) -->
     <addresses>
         <address id="A001" user_id="U005">
             <detailed_address>123 Đường A</detailed_address>
@@ -344,7 +344,7 @@
         </address>
     </addresses>
 
-    <!-- Review entity -->
+    <!-- Review entity (Quốc Việt) -->
     <reviews>
         <review id="RV001" book_id="B001" user_id="U005">
             <rating>5</rating>
@@ -373,7 +373,7 @@
         </review>
     </reviews>
 
-    <!-- Genre detail entity -->
+    <!-- Genre detail entity (Thế Vinh) -->
     <genre_details>
         <genre_detail genre_id="G001" book_id="B002" />
         <genre_detail genre_id="G002" book_id="B002" />
@@ -384,7 +384,7 @@
         <genre_detail genre_id="G007" book_id="B002" />
     </genre_details>
 
-    <!-- Author detail entity -->
+    <!-- Author detail entity (Thế Vinh) -->
     <author_details>
         <author_detail author_id="AU006" book_id="B003">
             <author_role>Chủ biên</author_role>
@@ -406,7 +406,7 @@
         </author_detail>
     </author_details>
 
-    <!-- Order detail entity -->
+    <!-- Order detail entity (Thành Trí) -->
     <order_details>
         <order_detail id="OD001" order_id="O001" book_id="B001">
             <quantity>2</quantity>
