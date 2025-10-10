@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE root SYSTEM "./root.dtd">
 
-<root>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="root.xsd">
     <!-- Book enitity (Thành Trí) -->
     <books>
         <book id="B001">
