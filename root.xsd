@@ -60,9 +60,41 @@
                 </xs:element>
 
                 <!-- Role entity (Quốc Việt) -->
-
+                <xs:element name="roles">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="role" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="role_name" type="xs:string" />
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:ID" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
                 <!-- User entity (Quốc Việt) -->
+                <xs:element name="users">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="user" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="username" type="xs:string" />
+                                        <xs:element name="password" type="xs:string" />
+                                        <xs:element name="numberphone" type="xs:string" />
 
+                                        <xs:element name="email" type="xs:string" />
+                                        <xs:element name="gender" type="xs:string" />
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:ID" use="required" />
+                                    <xs:attribute name="role_id" type="xs:IDREF" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
                 <!-- Order entity (Thành Trí) -->
                 <xs:element name="orders">
                     <xs:complexType>
@@ -88,9 +120,44 @@
                     </xs:complexType>
                 </xs:element>
                 <!-- Address entity (Quốc Việt) -->
-
+                <xs:element name="addresses">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="address" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="detailed_address" type="xs:string" />
+                                        <xs:element name="city" type="xs:string" />
+                                        <xs:element name="ward" type="xs:string" />
+                                        <xs:element name="default" type="xs:boolean" />
+                                        <xs:element name="created_date" type="xs:date" />
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:ID" use="required" />
+                                    <xs:attribute name="user_id" type="xs:IDREF" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
                 <!-- Review entity (Quốc Việt) -->
-
+                <xs:element name="reviews">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="review" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="rating" type="xs:integer" />
+                                        <xs:element name="comment" type="xs:string" />
+                                        <xs:element name="date" type="xs:date" />
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:ID" use="required" />
+                                    <xs:attribute name="user_id" type="xs:IDREF" use="required" />
+                                    <xs:attribute name="book_id" type="xs:IDREF" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
                 <!-- Genre detail entity (Thế Vinh) -->
                 <xs:element name="genre_details">
                     <xs:complexType>
