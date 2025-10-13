@@ -19,12 +19,19 @@
                                         <xs:element name="thumbnail" type="xs:anyURI" />
                                         <xs:element name="available" type="xs:boolean" />
                                     </xs:sequence>
-                                    <xs:attribute name="id" type="xs:ID" use="required" />
+                                    <xs:attribute name="id" use="required">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:ID">
+                                                <xs:pattern value="B\d+" />
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
+
                 <!-- Author entity (Thế Vinh) -->
                 <xs:element name="authors">
                     <xs:complexType>
@@ -36,7 +43,13 @@
                                         <xs:element name="date_of_birth" type="xs:date" />
                                         <xs:element name="avatar" type="xs:anyURI" />
                                     </xs:sequence>
-                                    <xs:attribute name="id" type="xs:string" use="required" />
+                                    <xs:attribute name="id" use="required">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:ID">
+                                                <xs:pattern value="AU\d+" />
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
@@ -52,7 +65,13 @@
                                     <xs:sequence>
                                         <xs:element name="genre_name" type="xs:string" />
                                     </xs:sequence>
-                                    <xs:attribute name="id" type="xs:string" use="required" />
+                                    <xs:attribute name="id" use="required">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:ID">
+                                                <xs:pattern value="G\d+" />
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
@@ -68,12 +87,19 @@
                                     <xs:sequence>
                                         <xs:element name="role_name" type="xs:string" />
                                     </xs:sequence>
-                                    <xs:attribute name="id" type="xs:ID" use="required" />
+                                    <xs:attribute name="id" use="required">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:ID">
+                                                <xs:pattern value="R\d+" />
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
+
                 <!-- User entity (Quốc Việt) -->
                 <xs:element name="users">
                     <xs:complexType>
@@ -84,17 +110,31 @@
                                         <xs:element name="username" type="xs:string" />
                                         <xs:element name="password" type="xs:string" />
                                         <xs:element name="numberphone" type="xs:string" />
-
                                         <xs:element name="email" type="xs:string" />
-                                        <xs:element name="gender" type="xs:string" />
+                                        <xs:element name="gender">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="Nam" />
+                                                    <xs:enumeration value="Nữ" />
+                                                    <xs:enumeration value="Khác" />
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
                                     </xs:sequence>
-                                    <xs:attribute name="id" type="xs:ID" use="required" />
+                                    <xs:attribute name="id" use="required">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:ID">
+                                                <xs:pattern value="U\d+" />
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
                                     <xs:attribute name="role_id" type="xs:IDREF" use="required" />
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
+
                 <!-- Order entity (Thành Trí) -->
                 <xs:element name="orders">
                     <xs:complexType>
@@ -112,13 +152,20 @@
                                         <xs:element name="total_amount" type="xs:decimal" />
                                         <xs:element name="note" type="xs:string" minOccurs="0" />
                                     </xs:sequence>
-                                    <xs:attribute name="id" type="xs:ID" use="required" />
+                                    <xs:attribute name="id" use="required">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:ID">
+                                                <xs:pattern value="O\d+" />
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
                                     <xs:attribute name="customer_id" type="xs:IDREF" use="required" />
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
+
                 <!-- Address entity (Quốc Việt) -->
                 <xs:element name="addresses">
                     <xs:complexType>
@@ -132,13 +179,20 @@
                                         <xs:element name="default" type="xs:boolean" />
                                         <xs:element name="created_date" type="xs:date" />
                                     </xs:sequence>
-                                    <xs:attribute name="id" type="xs:ID" use="required" />
+                                    <xs:attribute name="id" use="required">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:ID">
+                                                <xs:pattern value="A\d+" />
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
                                     <xs:attribute name="user_id" type="xs:IDREF" use="required" />
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
+
                 <!-- Review entity (Quốc Việt) -->
                 <xs:element name="reviews">
                     <xs:complexType>
@@ -146,11 +200,24 @@
                             <xs:element name="review" maxOccurs="unbounded">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="rating" type="xs:integer" />
+                                        <xs:element name="rating">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:integer">
+                                                    <xs:minInclusive value="1" />
+                                                    <xs:maxInclusive value="5" />
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
                                         <xs:element name="comment" type="xs:string" />
                                         <xs:element name="date" type="xs:date" />
                                     </xs:sequence>
-                                    <xs:attribute name="id" type="xs:ID" use="required" />
+                                    <xs:attribute name="id" use="required">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:ID">
+                                                <xs:pattern value="RV\d+" />
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
                                     <xs:attribute name="user_id" type="xs:IDREF" use="required" />
                                     <xs:attribute name="book_id" type="xs:IDREF" use="required" />
                                 </xs:complexType>
@@ -158,6 +225,7 @@
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
+
                 <!-- Genre detail entity (Thế Vinh) -->
                 <xs:element name="genre_details">
                     <xs:complexType>
@@ -199,7 +267,6 @@
                                         <xs:element name="quantity" type="xs:integer" />
                                         <xs:element name="unit_price" type="xs:decimal" />
                                     </xs:sequence>
-                                    <xs:attribute name="id" type="xs:ID" use="required" />
                                     <xs:attribute name="order_id" type="xs:IDREF" use="required" />
                                     <xs:attribute name="book_id" type="xs:IDREF" use="required" />
                                 </xs:complexType>
@@ -209,5 +276,120 @@
                 </xs:element>
             </xs:sequence>
         </xs:complexType>
+
+        <!-- Primary key -->
+        <xs:key name="bookId">
+            <xs:selector xpath=".//book" />
+            <xs:field xpath="@id" />
+        </xs:key>
+
+        <xs:key name="authorId">
+            <xs:selector xpath=".//author" />
+            <xs:field xpath="@id" />
+        </xs:key>
+
+        <xs:key name="genreId">
+            <xs:selector xpath=".//genre" />
+            <xs:field xpath="@id" />
+        </xs:key>
+
+        <xs:key name="roleId">
+            <xs:selector xpath=".//role" />
+            <xs:field xpath="@id" />
+        </xs:key>
+
+        <xs:key name="userId">
+            <xs:selector xpath=".//user" />
+            <xs:field xpath="@id" />
+        </xs:key>
+
+        <xs:key name="orderId">
+            <xs:selector xpath=".//order" />
+            <xs:field xpath="@id" />
+        </xs:key>
+
+        <xs:key name="addressId">
+            <xs:selector xpath=".//address" />
+            <xs:field xpath="@id" />
+        </xs:key>
+
+        <xs:key name="reviewId">
+            <xs:selector xpath=".//review" />
+            <xs:field xpath="@id" />
+        </xs:key>
+
+        <xs:key name="genreDetailId">
+            <xs:selector xpath=".//genre_detail" />
+            <xs:field xpath="@genre_id" />
+            <xs:field xpath="@book_id" />
+        </xs:key>
+
+        <xs:key name="authorDetailId">
+            <xs:selector xpath=".//author_detail" />
+            <xs:field xpath="@author_id" />
+            <xs:field xpath="@book_id" />
+        </xs:key>
+
+        <xs:key name="orderDetailId">
+            <xs:selector xpath=".//order_detail" />
+            <xs:field xpath="@order_id" />
+            <xs:field xpath="@book_id" />
+        </xs:key>
+
+        <!-- Foreign key -->
+        <xs:keyref name="userToRole" refer="roleId">
+            <xs:selector xpath=".//user" />
+            <xs:field xpath="@role_id" />
+        </xs:keyref>
+
+        <xs:keyref name="orderToUser" refer="userId">
+            <xs:selector xpath=".//order" />
+            <xs:field xpath="@customer_id" />
+        </xs:keyref>
+
+        <xs:keyref name="addressToUser" refer="userId">
+            <xs:selector xpath=".//address" />
+            <xs:field xpath="@user_id" />
+        </xs:keyref>
+
+        <xs:keyref name="reviewToBook" refer="bookId">
+            <xs:selector xpath=".//review" />
+            <xs:field xpath="@book_id" />
+        </xs:keyref>
+
+        <xs:keyref name="reviewToUser" refer="userId">
+            <xs:selector xpath=".//review" />
+            <xs:field xpath="@user_id" />
+        </xs:keyref>
+
+        <xs:keyref name="genreDetailToGenre" refer="genreId">
+            <xs:selector xpath=".//genre_detail" />
+            <xs:field xpath="@genre_id" />
+        </xs:keyref>
+
+        <xs:keyref name="genreDetailToBook" refer="bookId">
+            <xs:selector xpath=".//genre_detail" />
+            <xs:field xpath="@book_id" />
+        </xs:keyref>
+
+        <xs:keyref name="authorDetailToAuthor" refer="authorId">
+            <xs:selector xpath=".//author_detail" />
+            <xs:field xpath="@author_id" />
+        </xs:keyref>
+
+        <xs:keyref name="authorDetailToBook" refer="bookId">
+            <xs:selector xpath=".//author_detail" />
+            <xs:field xpath="@book_id" />
+        </xs:keyref>
+
+        <xs:keyref name="orderDetailToOrder" refer="orderId">
+            <xs:selector xpath=".//order_detail" />
+            <xs:field xpath="@order_id" />
+        </xs:keyref>
+
+        <xs:keyref name="orderDetailToBook" refer="bookId">
+            <xs:selector xpath=".//order_detail" />
+            <xs:field xpath="@book_id" />
+        </xs:keyref>
     </xs:element>
 </xs:schema>
