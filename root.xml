@@ -408,37 +408,37 @@
 
     <!-- Order detail entity (Thành Trí) -->
     <order_details>
-        <order_detail id="OD001" order_id="O001" book_id="B001">
+        <order_detail order_id="O001" book_id="B001">
             <quantity>2</quantity>
             <unit_price>25.00</unit_price>
         </order_detail>
 
-        <order_detail id="OD002" order_id="O001" book_id="B002">
+        <order_detail order_id="O001" book_id="B002">
             <quantity>1</quantity>
             <unit_price>100.75</unit_price>
         </order_detail>
 
-        <order_detail id="OD003" order_id="O002" book_id="B003">
+        <order_detail order_id="O002" book_id="B003">
             <quantity>3</quantity>
             <unit_price>29.83</unit_price>
         </order_detail>
 
-        <order_detail id="OD004" order_id="O002" book_id="B003">
+        <order_detail order_id="O002" book_id="B003">
             <quantity>3</quantity>
             <unit_price>29.83</unit_price>
         </order_detail>
 
-        <order_detail id="OD005" order_id="O003" book_id="B004">
+        <order_detail order_id="O003" book_id="B004">
             <quantity>1</quantity>
             <unit_price>45.00</unit_price>
         </order_detail>
 
-        <order_detail id="OD006" order_id="O004" book_id="B005">
+        <order_detail order_id="O004" book_id="B005">
             <quantity>4</quantity>
             <unit_price>30.00</unit_price>
         </order_detail>
 
-        <order_detail id="OD007" order_id="O005" book_id="B006">
+        <order_detail order_id="O005" book_id="B006">
             <quantity>2</quantity>
             <unit_price>60.00</unit_price>
         </order_detail>

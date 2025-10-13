@@ -37,13 +37,14 @@
 <!ELEMENT users (user+)>
 
 <!ELEMENT user (username, password, numberphone, email, gender)>
-<!ATTLIST user id ID #REQUIRED role_id IDREF #REQUIRED>
+<!ATTLIST user
+    id ID #REQUIRED
+    role_id IDREF #REQUIRED>
 <!ELEMENT username (#PCDATA)>
 <!ELEMENT password (#PCDATA)>
 <!ELEMENT numberphone (#PCDATA)>
 <!ELEMENT email (#PCDATA)>
 <!ELEMENT gender (#PCDATA)>
-<!ELEMENT roleId (#PCDATA)>
 
 <!-- Order entity (Thành Trí) -->
 <!ELEMENT orders (order*)>
@@ -77,7 +78,10 @@
 <!-- Review entity (Quốc Việt) -->
 <!ELEMENT reviews (review+)>
 <!ELEMENT review (rating, comment, date?)>
-<!ATTLIST review id ID #REQUIRED book_id IDREF #REQUIRED user_id IDREF #REQUIRED>
+<!ATTLIST review
+    id ID #REQUIRED
+    book_id IDREF #REQUIRED
+    user_id IDREF #REQUIRED>
 <!ELEMENT rating (#PCDATA)>
 <!ELEMENT comment (#PCDATA)>
 <!ELEMENT date (#PCDATA)>
@@ -85,21 +89,18 @@
 <!-- Genre detail entity (Thế Vinh) -->
 <!ELEMENT genre_details (genre_detail*)>
 <!ELEMENT genre_detail EMPTY>
-<!ATTLIST genre_detail genre_id IDREF #REQUIRED>
-<!ATTLIST genre_detail book_id IDREF #REQUIRED>
+<!ATTLIST genre_detail genre_id IDREF #REQUIRED book_id IDREF #REQUIRED>
 
 <!-- Author detail entity (Thế Vinh) -->
 <!ELEMENT author_details (author_detail*)>
 <!ELEMENT author_detail (author_role)>
 <!ELEMENT author_role (#PCDATA)>
-<!ATTLIST author_detail author_id IDREF #REQUIRED>
-<!ATTLIST author_detail book_id IDREF #REQUIRED>
+<!ATTLIST author_detail author_id IDREF #REQUIRED book_id IDREF #REQUIRED>
 
 <!-- Order detail entity (Thành Trí) -->
 <!ELEMENT order_details (order_detail*)>
 <!ELEMENT order_detail (quantity, unit_price)>
 <!ATTLIST order_detail
-    id CDATA #REQUIRED
     order_id IDREF #REQUIRED
     book_id IDREF #REQUIRED
 >
