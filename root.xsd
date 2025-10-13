@@ -6,6 +6,18 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="KieuMaKhoaNgoai">
+        <xs:restriction base="xs:IDREF">
+            <xs:maxLength value="20" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="KieuSoDienThoai">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="10" />
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:simpleType name="KieuTen">
         <xs:restriction base="xs:string">
             <xs:maxLength value="50" />
@@ -31,7 +43,7 @@
                                         <xs:element name="thumbnail" type="xs:anyURI" />
                                         <xs:element name="available" type="xs:boolean" />
                                     </xs:sequence>
-                                    <xs:attribute name="id" type="KieuMa" use="required"/>
+                                    <xs:attribute name="id" type="KieuMa" use="required" />
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
@@ -79,7 +91,7 @@
                             <xs:element name="role" maxOccurs="unbounded">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="role_name" type="xs:string" />
+                                        <xs:element name="role_name" type="KieuTen" />
                                     </xs:sequence>
                                     <xs:attribute name="id" type="KieuMa" use="required" />
                                 </xs:complexType>
@@ -95,9 +107,9 @@
                             <xs:element name="user" maxOccurs="unbounded">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="username" type="xs:string" />
+                                        <xs:element name="username" type="KieuTen" />
                                         <xs:element name="password" type="xs:string" />
-                                        <xs:element name="numberphone" type="xs:string" />
+                                        <xs:element name="numberphone" type="KieuSoDienThoai" />
                                         <xs:element name="email" type="xs:string" />
                                         <xs:element name="gender">
                                             <xs:simpleType>
@@ -109,14 +121,9 @@
                                             </xs:simpleType>
                                         </xs:element>
                                     </xs:sequence>
-                                    <xs:attribute name="id" use="required">
-                                        <xs:simpleType>
-                                            <xs:restriction base="xs:ID">
-                                                <xs:pattern value="U\d+" />
-                                            </xs:restriction>
-                                        </xs:simpleType>
-                                    </xs:attribute>
-                                    <xs:attribute name="role_id" type="xs:IDREF" use="required" />
+                                    <xs:attribute name="id" type="KieuMa" use="required" />
+                                    <xs:attribute name="role_id" type="KieuMaKhoaNgoai"
+                                        use="required" />
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
@@ -130,24 +137,19 @@
                             <xs:element name="order" maxOccurs="unbounded">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="customer_name" type="xs:string" />
-                                        <xs:element name="tel" type="xs:string" />
+                                        <xs:element name="customer_name" type="KieuTen" />
+                                        <xs:element name="tel" type="KieuSoDienThoai" />
                                         <xs:element name="order_date" type="xs:date" />
-                                        <xs:element name="status" type="xs:string" />
+                                        <xs:element name="status" type="KieuTen" />
                                         <xs:element name="order_address" type="xs:string" />
-                                        <xs:element name="payment_method" type="xs:string" />
+                                        <xs:element name="payment_method" type="KieuTen" />
                                         <xs:element name='discount' type="xs:decimal" minOccurs="0" />
                                         <xs:element name="total_amount" type="xs:decimal" />
                                         <xs:element name="note" type="xs:string" minOccurs="0" />
                                     </xs:sequence>
-                                    <xs:attribute name="id" use="required">
-                                        <xs:simpleType>
-                                            <xs:restriction base="xs:ID">
-                                                <xs:pattern value="O\d+" />
-                                            </xs:restriction>
-                                        </xs:simpleType>
-                                    </xs:attribute>
-                                    <xs:attribute name="customer_id" type="xs:IDREF" use="required" />
+                                    <xs:attribute name="id" type="KieuMa" use="required" />
+                                    <xs:attribute name="customer_id" type="KieuMaKhoaNgoai"
+                                        use="required" />
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
@@ -162,19 +164,14 @@
                                 <xs:complexType>
                                     <xs:sequence>
                                         <xs:element name="detailed_address" type="xs:string" />
-                                        <xs:element name="city" type="xs:string" />
-                                        <xs:element name="ward" type="xs:string" />
+                                        <xs:element name="city" type="KieuTen" />
+                                        <xs:element name="ward" type="KieuTen" />
                                         <xs:element name="default" type="xs:boolean" />
                                         <xs:element name="created_date" type="xs:date" />
                                     </xs:sequence>
-                                    <xs:attribute name="id" use="required">
-                                        <xs:simpleType>
-                                            <xs:restriction base="xs:ID">
-                                                <xs:pattern value="A\d+" />
-                                            </xs:restriction>
-                                        </xs:simpleType>
-                                    </xs:attribute>
-                                    <xs:attribute name="user_id" type="xs:IDREF" use="required" />
+                                    <xs:attribute name="id" type="KieuMa" use="required" />
+                                    <xs:attribute name="user_id" type="KieuMaKhoaNgoai"
+                                        use="required" />
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
@@ -199,15 +196,11 @@
                                         <xs:element name="comment" type="xs:string" />
                                         <xs:element name="date" type="xs:date" />
                                     </xs:sequence>
-                                    <xs:attribute name="id" use="required">
-                                        <xs:simpleType>
-                                            <xs:restriction base="xs:ID">
-                                                <xs:pattern value="RV\d+" />
-                                            </xs:restriction>
-                                        </xs:simpleType>
-                                    </xs:attribute>
-                                    <xs:attribute name="user_id" type="xs:IDREF" use="required" />
-                                    <xs:attribute name="book_id" type="xs:IDREF" use="required" />
+                                    <xs:attribute name="id" type="KieuMa" use="required" />
+                                    <xs:attribute name="user_id" type="KieuMaKhoaNgoai"
+                                        use="required" />
+                                    <xs:attribute name="book_id" type="KieuMaKhoaNgoai"
+                                        use="required" />
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
@@ -220,8 +213,10 @@
                         <xs:sequence>
                             <xs:element name="genre_detail" maxOccurs="unbounded">
                                 <xs:complexType>
-                                    <xs:attribute name="genre_id" type="xs:string" use="required" />
-                                    <xs:attribute name="book_id" type="xs:string" use="required" />
+                                    <xs:attribute name="genre_id" type="KieuMaKhoaNgoai"
+                                        use="required" />
+                                    <xs:attribute name="book_id" type="KieuMaKhoaNgoai"
+                                        use="required" />
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
@@ -237,8 +232,10 @@
                                     <xs:sequence>
                                         <xs:element name="author_role" type="xs:string" />
                                     </xs:sequence>
-                                    <xs:attribute name="author_id" type="xs:string" use="required" />
-                                    <xs:attribute name="book_id" type="xs:string" use="required" />
+                                    <xs:attribute name="author_id" type="KieuMaKhoaNgoai"
+                                        use="required" />
+                                    <xs:attribute name="book_id" type="KieuMaKhoaNgoai"
+                                        use="required" />
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
@@ -255,8 +252,10 @@
                                         <xs:element name="quantity" type="xs:integer" />
                                         <xs:element name="unit_price" type="xs:decimal" />
                                     </xs:sequence>
-                                    <xs:attribute name="order_id" type="xs:IDREF" use="required" />
-                                    <xs:attribute name="book_id" type="xs:IDREF" use="required" />
+                                    <xs:attribute name="order_id" type="KieuMaKhoaNgoai"
+                                        use="required" />
+                                    <xs:attribute name="book_id" type="KieuMaKhoaNgoai"
+                                        use="required" />
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
