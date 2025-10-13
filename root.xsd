@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:simpleType name="KieuMa">
+        <xs:restriction base="xs:ID">
+            <xs:maxLength value="20" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="KieuTen">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="50" />
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:element name="root">
         <xs:complexType>
             <xs:sequence>
@@ -10,7 +22,7 @@
                             <xs:element name="book" maxOccurs="unbounded">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="title" type="xs:string" />
+                                        <xs:element name="title" type="KieuTen" />
                                         <xs:element name="page_count" type="xs:integer" />
                                         <xs:element name="price" type="xs:decimal" />
                                         <xs:element name="amount" type="xs:integer" />
@@ -19,13 +31,7 @@
                                         <xs:element name="thumbnail" type="xs:anyURI" />
                                         <xs:element name="available" type="xs:boolean" />
                                     </xs:sequence>
-                                    <xs:attribute name="id" use="required">
-                                        <xs:simpleType>
-                                            <xs:restriction base="xs:ID">
-                                                <xs:pattern value="B\d+" />
-                                            </xs:restriction>
-                                        </xs:simpleType>
-                                    </xs:attribute>
+                                    <xs:attribute name="id" type="KieuMa" use="required"/>
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
@@ -39,17 +45,11 @@
                             <xs:element name="author" maxOccurs="unbounded">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="full_name" type="xs:string" />
+                                        <xs:element name="full_name" type="KieuTen" />
                                         <xs:element name="date_of_birth" type="xs:date" />
                                         <xs:element name="avatar" type="xs:anyURI" />
                                     </xs:sequence>
-                                    <xs:attribute name="id" use="required">
-                                        <xs:simpleType>
-                                            <xs:restriction base="xs:ID">
-                                                <xs:pattern value="AU\d+" />
-                                            </xs:restriction>
-                                        </xs:simpleType>
-                                    </xs:attribute>
+                                    <xs:attribute name="id" type="KieuMa" use="required" />
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
@@ -63,15 +63,9 @@
                             <xs:element name="genre" maxOccurs="unbounded">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="genre_name" type="xs:string" />
+                                        <xs:element name="genre_name" type="KieuTen" />
                                     </xs:sequence>
-                                    <xs:attribute name="id" use="required">
-                                        <xs:simpleType>
-                                            <xs:restriction base="xs:ID">
-                                                <xs:pattern value="G\d+" />
-                                            </xs:restriction>
-                                        </xs:simpleType>
-                                    </xs:attribute>
+                                    <xs:attribute name="id" type="KieuMa" use="required" />
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
@@ -87,13 +81,7 @@
                                     <xs:sequence>
                                         <xs:element name="role_name" type="xs:string" />
                                     </xs:sequence>
-                                    <xs:attribute name="id" use="required">
-                                        <xs:simpleType>
-                                            <xs:restriction base="xs:ID">
-                                                <xs:pattern value="R\d+" />
-                                            </xs:restriction>
-                                        </xs:simpleType>
-                                    </xs:attribute>
+                                    <xs:attribute name="id" type="KieuMa" use="required" />
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
