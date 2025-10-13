@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:noNamespaceSchemaLocation="root.xsd">
+    xsi:noNamespaceSchemaLocation="root.xsd">
     <!-- Book enitity (Thành Trí) -->
     <books>
         <book id="B001">
@@ -96,7 +96,7 @@
             <date_of_birth>1980-01-01</date_of_birth>
             <avatar>
                 https://cand.com.vn/Files/Image/thanhbinh/2020/05/25/thumb_660_f6a85596-232f-4237-a9e6-48c71c477213.JPG
-                </avatar>
+            </avatar>
         </author>
         <author id="AU002">
             <full_name>Nguyễn Vĩnh Nguyên</full_name>
@@ -108,7 +108,7 @@
             <date_of_birth>1989-06-04</date_of_birth>
             <avatar>
                 https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSwn_mokrmX3dECxWh-T-cM0fEggb4_uZPOQ2KVSx-rJBi7ZnxC3Z_gGYicTMdim8jlRf0A7VtaITCMH845X1eBNCdBQImh7gBWE-Gx-Fc_
-                </avatar>
+            </avatar>
         </author>
         <author id="AU004">
             <full_name>Đỗ Bích Thúy</full_name>
@@ -120,7 +120,7 @@
             <date_of_birth>1998-04-09</date_of_birth>
             <avatar>
                 https://tramvanhoc.com/wp-content/uploads/2024/07/Gioi-thieu-tac-gia-Nguyen-Mai-Chi-Tieu-su-su-nghiep-phong-cach-sang-tac-nhan-dinh.jpg
-                </avatar>
+            </avatar>
         </author>
 
         <author id="AU006">
@@ -128,14 +128,14 @@
             <date_of_birth>1917-02-25</date_of_birth>
             <avatar>
                 https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRjIEQi65pbyd1sAhVTuuLq1986APk5D_7iw&amp;s
-                </avatar>
+            </avatar>
         </author>
         <author id="AU007">
             <full_name>Trần Hải Đăng</full_name>
             <date_of_birth>1928-04-04</date_of_birth>
             <avatar>
                 https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRjjVutIhtrkRs86P8HcPKZm1-gmlb0xexI7ZPTed7g61BZr2lcJBkwAMKdP0x9WSGgVRml-6TU1J3IDcmpTw_KPbxgZnHBEY4trfPRBhDt1w
-                </avatar>
+            </avatar>
         </author>
     </authors>
 
