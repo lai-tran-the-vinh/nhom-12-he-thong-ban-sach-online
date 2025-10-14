@@ -98,11 +98,13 @@
                 https://cand.com.vn/Files/Image/thanhbinh/2020/05/25/thumb_660_f6a85596-232f-4237-a9e6-48c71c477213.JPG
             </avatar>
         </author>
+
         <author id="AU002">
             <full_name>Nguyễn Vĩnh Nguyên</full_name>
             <date_of_birth>1979-05-01</date_of_birth>
             <avatar> https://www.netabooks.vn/data/author/8331/logo-nguyen-vinh-nguyen.jpg </avatar>
         </author>
+
         <author id="AU003">
             <full_name>Nguyễn Trương Quý</full_name>
             <date_of_birth>1989-06-04</date_of_birth>
@@ -110,11 +112,13 @@
                 https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSwn_mokrmX3dECxWh-T-cM0fEggb4_uZPOQ2KVSx-rJBi7ZnxC3Z_gGYicTMdim8jlRf0A7VtaITCMH845X1eBNCdBQImh7gBWE-Gx-Fc_
             </avatar>
         </author>
+
         <author id="AU004">
             <full_name>Đỗ Bích Thúy</full_name>
             <date_of_birth>1995-08-05</date_of_birth>
             <avatar> https://vanvn.vn/wp-content/uploads/2021/03/Do-Bich-Thuy-vanvn.jpg </avatar>
         </author>
+
         <author id="AU005">
             <full_name>Nguyễn Mai Chi</full_name>
             <date_of_birth>1998-04-09</date_of_birth>
@@ -130,6 +134,7 @@
                 https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRjIEQi65pbyd1sAhVTuuLq1986APk5D_7iw&amp;s
             </avatar>
         </author>
+
         <author id="AU007">
             <full_name>Trần Hải Đăng</full_name>
             <date_of_birth>1928-04-04</date_of_birth>
@@ -144,24 +149,31 @@
         <genre id="G001">
             <genre_name>Tình cảm</genre_name>
         </genre>
+
         <genre id="G002">
             <genre_name>Tâm lý</genre_name>
         </genre>
+
         <genre id="G003">
             <genre_name>Học thuật</genre_name>
         </genre>
+
         <genre id="G004">
             <genre_name>Thiếu nhi</genre_name>
         </genre>
+
         <genre id="G005">
             <genre_name>Kỹ năng</genre_name>
         </genre>
+
         <genre id="G006">
             <genre_name>Tiểu thuyết</genre_name>
         </genre>
+
         <genre id="G007">
             <genre_name>Tài chính</genre_name>
         </genre>
+
         <genre id="G008">
             <genre_name>Kinh doanh</genre_name>
         </genre>
@@ -172,12 +184,15 @@
         <role id="R001">
             <role_name>Quản trị viên</role_name>
         </role>
+
         <role id="R002">
             <role_name>Quản lý</role_name>
         </role>
+
         <role id="R003">
             <role_name>Nhân viên</role_name>
         </role>
+
         <role id="R004">
             <role_name>Khách hàng</role_name>
         </role>
@@ -192,6 +207,7 @@
             <email>vinhltth@gmail.com</email>
             <gender>Nam</gender>
         </user>
+
         <user id="U002" role_id="R002">
             <username>Võ Quốc Việt</username>
             <password>12345</password>
@@ -199,6 +215,7 @@
             <email>vietvq@gmail.com</email>
             <gender>Nam</gender>
         </user>
+
         <user id="U003" role_id="R003">
             <username>Dương Thành Trí</username>
             <password>12345</password>
@@ -206,6 +223,7 @@
             <email>dtt@gmail.com</email>
             <gender>Nam</gender>
         </user>
+
         <user id="U004" role_id="R004">
             <username>Danh Nhật Tiến</username>
             <password>12345</password>
@@ -213,6 +231,7 @@
             <email>dnt@gmail.com</email>
             <gender>Nam</gender>
         </user>
+
         <user id="U005" role_id="R004">
             <username>Trần Quang Minh</username>
             <password>12345</password>
@@ -328,6 +347,7 @@
             <default>true</default>
             <created_date> 2024-06-15 </created_date>
         </address>
+
         <address id="A002" user_id="U004">
             <detailed_address>456 Đường B</detailed_address>
             <city>Hồ Chí Minh</city>
@@ -335,6 +355,7 @@
             <default>false</default>
             <created_date> 2024-06-15 </created_date>
         </address>
+
         <address id="A003" user_id="U003">
             <detailed_address>789 Đường C</detailed_address>
             <city>Đà Nẵng</city>
@@ -383,21 +404,25 @@
             <comment>Sản phẩm rất tốt!</comment>
             <date>2024-06-15</date>
         </review>
+
         <review id="RV002" book_id="B002" user_id="U003">
             <rating>4</rating>
             <comment>Chất lượng ổn, giao hàng nhanh.</comment>
             <date>2024-06-15</date>
         </review>
+
         <review id="RV003" book_id="B003" user_id="U005">
             <rating>3</rating>
             <comment>Sản phẩm bình thường, không có gì đặc biệt.</comment>
             <date>2024-06-15</date>
         </review>
+
         <review id="RV004" book_id="B004" user_id="U003">
             <rating>2</rating>
             <comment>Chất lượng không như mong đợi.</comment>
             <date>2024-06-15</date>
         </review>
+
         <review id="RV005" book_id="B005" user_id="U002">
             <rating>1</rating>
             <comment>Rất thất vọng với sản phẩm này.</comment>
@@ -433,18 +458,23 @@
         <author_detail author_id="AU006" book_id="B003">
             <author_role>Chủ biên</author_role>
         </author_detail>
+
         <author_detail author_id="AU005" book_id="B003">
             <author_role>Thành viên</author_role>
         </author_detail>
+
         <author_detail author_id="AU004" book_id="B003">
             <author_role>Chủ biên</author_role>
         </author_detail>
+
         <author_detail author_id="AU003" book_id="B003">
             <author_role>Thành viên</author_role>
         </author_detail>
+
         <author_detail author_id="AU002" book_id="B003">
             <author_role>Chủ biên</author_role>
         </author_detail>
+
         <author_detail author_id="AU001" book_id="B003">
             <author_role>Chủ biên</author_role>
         </author_detail>
