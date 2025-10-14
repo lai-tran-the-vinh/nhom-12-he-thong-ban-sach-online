@@ -220,6 +220,22 @@
             <email>cqm@gmail.com</email>
             <gender>Nam</gender>
         </user>
+
+        <user id="U006" role_id="R004">
+            <username>Nguyễn Thị Hồng Nhung</username>
+            <password>12345</password>
+            <numberphone>0907313465</numberphone>
+            <email>nhung@gmail.com</email>
+            <gender>Nữ</gender>
+        </user>
+
+        <user id="U007" role_id="R004">
+            <username>Phạm Thị Thu Hương</username>
+            <password>12345</password>
+            <numberphone>0907313466</numberphone>
+            <email>thuong@gmail.com</email>
+            <gender>Nữ</gender>
+        </user>
     </users>
 
     <!-- Order entity (Thành Trí) -->
@@ -342,6 +358,22 @@
             <default>false</default>
             <created_date> 2024-06-15 </created_date>
         </address>
+
+        <address id="A006" user_id="U006">
+            <detailed_address>303 Đường F</detailed_address>
+            <city>Huế</city>
+            <ward>Phú Hậu</ward>
+            <default>true</default>
+            <created_date> 2024-06-15 </created_date>
+        </address>
+
+        <address id="A007" user_id="U007">
+            <detailed_address>404 Đường G</detailed_address>
+            <city>Nha Trang</city>
+            <ward>Vĩnh Phước</ward>
+            <default>false</default>
+            <created_date> 2024-06-15 </created_date>
+        </address>
     </addresses>
 
     <!-- Review entity (Quốc Việt) -->
@@ -369,6 +401,18 @@
         <review id="RV005" book_id="B005" user_id="U002">
             <rating>1</rating>
             <comment>Rất thất vọng với sản phẩm này.</comment>
+            <date>2024-06-15</date>
+        </review>
+
+        <review id="RV006" book_id="B006" user_id="U004">
+            <rating>5</rating>
+            <comment>Tuyệt vời, sẽ mua lại!</comment>
+            <date>2024-06-15</date>
+        </review>
+
+        <review id="RV007" book_id="B007" user_id="U001">
+            <rating>4</rating>
+            <comment>Hài lòng với sản phẩm.</comment>
             <date>2024-06-15</date>
         </review>
     </reviews>
