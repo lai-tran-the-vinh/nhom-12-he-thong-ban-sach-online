@@ -89,13 +89,17 @@
 <!-- Genre detail entity (Thế Vinh) -->
 <!ELEMENT genre_details (genre_detail*)>
 <!ELEMENT genre_detail EMPTY>
-<!ATTLIST genre_detail genre_id IDREF #REQUIRED book_id IDREF #REQUIRED>
+<!ATTLIST genre_detail
+    genre_id IDREF #REQUIRED
+    book_id IDREF #REQUIRED>
 
 <!-- Author detail entity (Thế Vinh) -->
 <!ELEMENT author_details (author_detail*)>
 <!ELEMENT author_detail (author_role)>
 <!ELEMENT author_role (#PCDATA)>
-<!ATTLIST author_detail author_id IDREF #REQUIRED book_id IDREF #REQUIRED>
+<!ATTLIST author_detail
+    author_id IDREF #REQUIRED
+    book_id IDREF #REQUIRED>
 
 <!-- Order detail entity (Thành Trí) -->
 <!ELEMENT order_details (order_detail*)>
