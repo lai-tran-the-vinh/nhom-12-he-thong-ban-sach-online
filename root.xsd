@@ -5,25 +5,32 @@
             <xs:maxLength value="20" />
         </xs:restriction>
     </xs:simpleType>
-
+    
     <xs:simpleType name="KieuMaKhoaNgoai">
         <xs:restriction base="xs:IDREF">
             <xs:maxLength value="20" />
         </xs:restriction>
     </xs:simpleType>
-
-    <xs:simpleType name="KieuSoDienThoai">
+    
+    <xs:simpleType name="EmailType">
         <xs:restriction base="xs:string">
-            <xs:maxLength value="10" />
+            <xs:pattern value="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"/>
         </xs:restriction>
     </xs:simpleType>
-
+    
+    
+    <xs:simpleType name="KieuSoDienThoai">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="0\d{9}" />
+        </xs:restriction>
+    </xs:simpleType>
+    
     <xs:simpleType name="KieuTen">
         <xs:restriction base="xs:string">
             <xs:maxLength value="50" />
         </xs:restriction>
     </xs:simpleType>
-
+    
     <xs:element name="root">
         <xs:complexType>
             <xs:sequence>
@@ -49,7 +56,7 @@
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
-
+                
                 <!-- Author entity (Thế Vinh) -->
                 <xs:element name="authors">
                     <xs:complexType>
@@ -67,7 +74,7 @@
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
-
+                
                 <!-- Genre entity (Thế Vinh) -->
                 <xs:element name="genres">
                     <xs:complexType>
@@ -83,7 +90,7 @@
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
-
+                
                 <!-- Role entity (Quốc Việt) -->
                 <xs:element name="roles">
                     <xs:complexType>
@@ -99,7 +106,7 @@
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
-
+                
                 <!-- User entity (Quốc Việt) -->
                 <xs:element name="users">
                     <xs:complexType>
@@ -110,7 +117,7 @@
                                         <xs:element name="username" type="KieuTen" />
                                         <xs:element name="password" type="xs:string" />
                                         <xs:element name="numberphone" type="KieuSoDienThoai" />
-                                        <xs:element name="email" type="xs:string" />
+                                        <xs:element name="email" type="EmailType" />
                                         <xs:element name="gender">
                                             <xs:simpleType>
                                                 <xs:restriction base="xs:string">
@@ -123,13 +130,13 @@
                                     </xs:sequence>
                                     <xs:attribute name="id" type="KieuMa" use="required" />
                                     <xs:attribute name="role_id" type="KieuMaKhoaNgoai"
-                                        use="required" />
+                                                  use="required" />
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
-
+                
                 <!-- Order entity (Thành Trí) -->
                 <xs:element name="orders">
                     <xs:complexType>
@@ -149,13 +156,13 @@
                                     </xs:sequence>
                                     <xs:attribute name="id" type="KieuMa" use="required" />
                                     <xs:attribute name="customer_id" type="KieuMaKhoaNgoai"
-                                        use="required" />
+                                                  use="required" />
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
-
+                
                 <!-- Address entity (Quốc Việt) -->
                 <xs:element name="addresses">
                     <xs:complexType>
@@ -171,13 +178,13 @@
                                     </xs:sequence>
                                     <xs:attribute name="id" type="KieuMa" use="required" />
                                     <xs:attribute name="user_id" type="KieuMaKhoaNgoai"
-                                        use="required" />
+                                                  use="required" />
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
-
+                
                 <!-- Review entity (Quốc Việt) -->
                 <xs:element name="reviews">
                     <xs:complexType>
@@ -198,15 +205,15 @@
                                     </xs:sequence>
                                     <xs:attribute name="id" type="KieuMa" use="required" />
                                     <xs:attribute name="user_id" type="KieuMaKhoaNgoai"
-                                        use="required" />
+                                                  use="required" />
                                     <xs:attribute name="book_id" type="KieuMaKhoaNgoai"
-                                        use="required" />
+                                                  use="required" />
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
-
+                
                 <!-- Genre detail entity (Thế Vinh) -->
                 <xs:element name="genre_details">
                     <xs:complexType>
@@ -214,15 +221,15 @@
                             <xs:element name="genre_detail" maxOccurs="unbounded">
                                 <xs:complexType>
                                     <xs:attribute name="genre_id" type="KieuMaKhoaNgoai"
-                                        use="required" />
+                                                  use="required" />
                                     <xs:attribute name="book_id" type="KieuMaKhoaNgoai"
-                                        use="required" />
+                                                  use="required" />
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
-
+                
                 <!-- Author detail entity (Thế Vinh) -->
                 <xs:element name="author_details">
                     <xs:complexType>
@@ -233,15 +240,15 @@
                                         <xs:element name="author_role" type="xs:string" />
                                     </xs:sequence>
                                     <xs:attribute name="author_id" type="KieuMaKhoaNgoai"
-                                        use="required" />
+                                                  use="required" />
                                     <xs:attribute name="book_id" type="KieuMaKhoaNgoai"
-                                        use="required" />
+                                                  use="required" />
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
-
+                
                 <!-- Order detail entity (Thành Trí) -->
                 <xs:element name="order_details">
                     <xs:complexType>
@@ -253,9 +260,9 @@
                                         <xs:element name="unit_price" type="xs:decimal" />
                                     </xs:sequence>
                                     <xs:attribute name="order_id" type="KieuMaKhoaNgoai"
-                                        use="required" />
+                                                  use="required" />
                                     <xs:attribute name="book_id" type="KieuMaKhoaNgoai"
-                                        use="required" />
+                                                  use="required" />
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
@@ -263,117 +270,117 @@
                 </xs:element>
             </xs:sequence>
         </xs:complexType>
-
+        
         <!-- Primary key -->
         <xs:key name="bookId">
             <xs:selector xpath=".//book" />
             <xs:field xpath="@id" />
         </xs:key>
-
+        
         <xs:key name="authorId">
             <xs:selector xpath=".//author" />
             <xs:field xpath="@id" />
         </xs:key>
-
+        
         <xs:key name="genreId">
             <xs:selector xpath=".//genre" />
             <xs:field xpath="@id" />
         </xs:key>
-
+        
         <xs:key name="roleId">
             <xs:selector xpath=".//role" />
             <xs:field xpath="@id" />
         </xs:key>
-
+        
         <xs:key name="userId">
             <xs:selector xpath=".//user" />
             <xs:field xpath="@id" />
         </xs:key>
-
+        
         <xs:key name="orderId">
             <xs:selector xpath=".//order" />
             <xs:field xpath="@id" />
         </xs:key>
-
+        
         <xs:key name="addressId">
             <xs:selector xpath=".//address" />
             <xs:field xpath="@id" />
         </xs:key>
-
+        
         <xs:key name="reviewId">
             <xs:selector xpath=".//review" />
             <xs:field xpath="@id" />
         </xs:key>
-
+        
         <xs:key name="genreDetailId">
             <xs:selector xpath=".//genre_detail" />
             <xs:field xpath="@genre_id" />
             <xs:field xpath="@book_id" />
         </xs:key>
-
+        
         <xs:key name="authorDetailId">
             <xs:selector xpath=".//author_detail" />
             <xs:field xpath="@author_id" />
             <xs:field xpath="@book_id" />
         </xs:key>
-
+        
         <xs:key name="orderDetailId">
             <xs:selector xpath=".//order_detail" />
             <xs:field xpath="@order_id" />
             <xs:field xpath="@book_id" />
         </xs:key>
-
+        
         <!-- Foreign key -->
         <xs:keyref name="userToRole" refer="roleId">
             <xs:selector xpath=".//user" />
             <xs:field xpath="@role_id" />
         </xs:keyref>
-
+        
         <xs:keyref name="orderToUser" refer="userId">
             <xs:selector xpath=".//order" />
             <xs:field xpath="@customer_id" />
         </xs:keyref>
-
+        
         <xs:keyref name="addressToUser" refer="userId">
             <xs:selector xpath=".//address" />
             <xs:field xpath="@user_id" />
         </xs:keyref>
-
+        
         <xs:keyref name="reviewToBook" refer="bookId">
             <xs:selector xpath=".//review" />
             <xs:field xpath="@book_id" />
         </xs:keyref>
-
+        
         <xs:keyref name="reviewToUser" refer="userId">
             <xs:selector xpath=".//review" />
             <xs:field xpath="@user_id" />
         </xs:keyref>
-
+        
         <xs:keyref name="genreDetailToGenre" refer="genreId">
             <xs:selector xpath=".//genre_detail" />
             <xs:field xpath="@genre_id" />
         </xs:keyref>
-
+        
         <xs:keyref name="genreDetailToBook" refer="bookId">
             <xs:selector xpath=".//genre_detail" />
             <xs:field xpath="@book_id" />
         </xs:keyref>
-
+        
         <xs:keyref name="authorDetailToAuthor" refer="authorId">
             <xs:selector xpath=".//author_detail" />
             <xs:field xpath="@author_id" />
         </xs:keyref>
-
+        
         <xs:keyref name="authorDetailToBook" refer="bookId">
             <xs:selector xpath=".//author_detail" />
             <xs:field xpath="@book_id" />
         </xs:keyref>
-
+        
         <xs:keyref name="orderDetailToOrder" refer="orderId">
             <xs:selector xpath=".//order_detail" />
             <xs:field xpath="@order_id" />
         </xs:keyref>
-
+        
         <xs:keyref name="orderDetailToBook" refer="bookId">
             <xs:selector xpath=".//order_detail" />
             <xs:field xpath="@book_id" />

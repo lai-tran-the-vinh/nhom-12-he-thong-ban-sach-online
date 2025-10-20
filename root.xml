@@ -273,7 +273,7 @@
 
         <order id="O002" customer_id="U002">
             <customer_name>Trần Thị B</customer_name>
-            <tel>9876543210</tel>
+            <tel>0876543210</tel>
             <order_date>2024-06-16</order_date>
             <status>Đã gửi hàng</status>
             <order_address>456 Phố Hàng Gai, Phường Hàng Gai, Quận Hoàn Kiếm, Hà Nội</order_address>
