@@ -16,10 +16,27 @@ xml = etree.parse(xmlFilename)
 
 # Thành Trí
 # 1. (Cơ bản) Chọn nhiều phần tử: Lấy title (tên) của tất cả các cuốn sách.
+book_titles = xml.xpath('//book/title/text()')
+print(book_titles)
 # 2. (Cơ bản) Lọc theo toán tử so sánh: Lấy full_name (tên đầy đủ) của các tác giả (author) sinh sau năm 1990.
+authors_born_after_1990 = xml.xpath('//author[substring(date_of_birth, 1, 4) > 1990]/full_name/text()')
+print(authors_born_after_1990)
 # 3. (Trung bình) Lọc với toán tử or: Lấy thông tin của các đơn hàng (order) có status (trạng thái) là 'Đang xử lý' hoặc 'Đã gửi hàng'.
+orders_with_specific_status = xml.xpath('//order[status="Đang xử lý" or status="Đã gửi hàng"]')
+for order in orders_with_specific_status:
+    order_id = order.get('id')
+    status = order.findtext('status')
+    print(f'Order ID: {order_id}, Status: {status}')
 # 4. (Trung bình) Hàm tính toán: Tính tổng số lượng (amount) của tất cả các cuốn sách có trong kho.
+total_amount = sum(int(book.findtext('amount')) for book in xml.xpath('//book'))
+print(f'Total amount of books in stock: {total_amount}')
 # 5. (Nâng cao) Truy vấn liên kết (Quan hệ nhiều-nhiều): Lấy full_name (tên đầy đủ) của tất cả tác giả (author) đã viết cuốn sách (book) có id là B003.
+author_ids = xml.xpath('//author_detail[@book_id="B003"]/@author_id')
+authors_of_B003 = []
+for aid in author_ids:
+    authors_of_B003.extend(xml.xpath(f'//author[@id="{aid}"]/full_name/text()'))
+
+print(authors_of_B003)
 
 # Quốc Việt
 # 1. (Cơ bản) Lọc với toán tử and: Lấy title (tên) của những cuốn sách có giá (price) lớn hơn 10 VÀ vẫn còn hàng (amount > 0).
