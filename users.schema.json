@@ -3,16 +3,41 @@
   "title": "User Schema",
   "type": "object",
   "properties": {
-    "id": { "$ref": "definitions.schema.json#/definitions/KieuMa" },
-    "role_id": { "$ref": "definitions.schema.json#/definitions/KieuMaKhoaNgoai" },
-    "username": { "$ref": "definitions.schema.json#/definitions/KieuTen" },
-    "password": { "type": "string" },
-    "numberphone": { "$ref": "definitions.schema.json#/definitions/KieuSoDienThoai" },
-    "email": { "$ref": "definitions.schema.json#/definitions/EmailType" },
+    "id": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "role_id": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "username": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "password": {
+      "type": "string"
+    },
+    "numberphone": {
+      "type": "string",
+      "pattern": "0\\d{9}"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
     "gender": {
       "type": "string",
       "enum": ["Nam", "Nữ", "Khác"]
     }
   },
-  "required": ["id", "role_id", "username", "password", "numberphone", "email", "gender"]
+  "required": [
+    "id",
+    "role_id",
+    "username",
+    "password",
+    "numberphone",
+    "email",
+    "gender"
+  ]
 }

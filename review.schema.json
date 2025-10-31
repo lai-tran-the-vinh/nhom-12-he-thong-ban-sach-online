@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Book Schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "title": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "page_count": { "type": "integer", "minimum": 0 },
+    "price": { "type": "number", "minimum": 0 },
+    "amount": { "type": "integer", "minimum": 0 },
+    "publish_year": { "type": "integer" },
+    "description": { "type": "string" },
+    "thumbnail": { "type": "string", "format": "uri" },
+    "available": { "type": "boolean" }
+  },
+  "required": [
+    "id",
+    "title",
+    "page_count",
+    "price",
+    "amount",
+    "publish_year",
+    "description",
+    "thumbnail",
+    "available"
+  ]
+}
