@@ -1,0 +1,47 @@
+{
+  "$schema": "./authors.schema.json",
+  "authors": [
+    {
+      "id": "AU001",
+      "full_name": "Hồ Anh Thái",
+      "date_of_birth": "1980-01-01",
+      "avatar": "https://cand.com.vn/Files/Image/thanhbinh/2020/05/25/thumb_660_f6a85596-232f-4237-a9e6-48c71c477213.JPG"
+    },
+    {
+      "id": "AU002",
+      "full_name": "Nguyễn Vĩnh Nguyên",
+      "date_of_birth": "1979-05-01",
+      "avatar": "https://www.netabooks.vn/data/author/8331/logo-nguyen-vinh-nguyen.jpg"
+    },
+    {
+      "id": "AU003",
+      "full_name": "Nguyễn Trương Quý",
+      "date_of_birth": "1989-06-04",
+      "avatar": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSwn_mokrmX3dECxWh-T-cM0fEggb4_uZPOQ2KVSx-rJBi7ZnxC3Z_gGYicTMdim8jlRf0A7VtaITCMH845X1eBNCdBQImh7gBWE-Gx-Fc_"
+    },
+    {
+      "id": "AU004",
+      "full_name": "Đỗ Bích Thúy",
+      "date_of_birth": "1995-08-05",
+      "avatar": "https://vanvn.vn/wp-content/uploads/2021/03/Do-Bich-Thuy-vanvn.jpg"
+    },
+    {
+      "id": "AU005",
+      "full_name": "Nguyễn Mai Chi",
+      "date_of_birth": "1998-04-09",
+      "avatar": "https://tramvanhoc.com/wp-content/uploads/2024/07/Gioi-thieu-tac-gia-Nguyen-Mai-Chi-Tieu-su-su-nghiep-phong-cach-sang-tac-nhan-dinh.jpg"
+    },
+    {
+      "id": "AU006",
+      "full_name": "Lê Nhật Thiên",
+      "date_of_birth": "1917-02-25",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRjIEQi65pbyd1sAhVTuuLq1986APk5D_7iw&s"
+    },
+    {
+      "id": "AU007",
+      "full_name": "Trần Hải Đăng",
+      "date_of_birth": "1928-04-04",
+      "avatar": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRjjVutIhtrkRs86P8HcPKZm1-gmlb0xexI7ZPTed7g61BZr2lcJBkwAMKdP0x9WSGgVRml-6TU1J3IDcmpTw_KPbxgZnHBEY4trfPRBhDt1w"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Books",
+  "type": "object",
+  "properties": {
+    "books": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^B\\d{3}$"
+          },
+          "title": {
+            "type": "string"
+          },
+          "page_count": {
+            "type": "integer",
+            "minimum": 2
+          },
+          "price": {
+            "type": "number",
+            "minimum": 0
+          },
+          "amount": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "publish_year": {
+            "type": "integer",
+            "minimum": 1450,
+            "maximum": 2025
+          },
+          "description": {
+            "type": "string"
+          },
+          "thumbnail": {
+            "type": "string",
+            "format": "uri"
+          },
+          "available": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "publish_year",
+          "price",
+          "amount",
+          "available",
+          "page_count",
+          "description",
+          "thumbnail"
+        ]
+      }
+    }
+  },
+  "required": ["books"]
+}

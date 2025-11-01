@@ -1,0 +1,82 @@
+{
+  "$schema": "./books.schema.json",
+  "books": [
+    {
+      "id": "B001",
+      "title": "Hướng dẫn dành cho Nhà phát triển XML",
+      "page_count": 352,
+      "price": 44.95,
+      "amount": 20,
+      "publish_year": 2000,
+      "description": "Cái nhìn chuyên sâu về việc tạo ứng dụng với XML.",
+      "thumbnail": "xml_developer_guide.jpg",
+      "available": true
+    },
+    {
+      "id": "B002",
+      "title": "Cơn mưa lúc nửa đêm",
+      "page_count": 256,
+      "price": 5.95,
+      "amount": 30,
+      "publish_year": 2001,
+      "description": "Một cựu kiến trúc sư chiến đấu chống lại xác sống công ty, một phù thủy độc ác, và tuổi thơ của chính mình để trở thành nữ hoàng của thế giới.",
+      "thumbnail": "midnight_rain.jpg",
+      "available": true
+    },
+    {
+      "id": "B003",
+      "title": "Maeve Thăng Thiên",
+      "page_count": 272,
+      "price": 5.95,
+      "amount": 5,
+      "publish_year": 2000,
+      "description": "Sau sự sụp đổ của một xã hội công nghệ nano ở Anh, những người sống sót trẻ tuổi đặt nền móng cho một xã hội mới.",
+      "thumbnail": "maeve_ascendant.jpg",
+      "available": true
+    },
+    {
+      "id": "B004",
+      "title": "Di sản của Oberon",
+      "page_count": 300,
+      "price": 5.95,
+      "amount": 0,
+      "publish_year": 2001,
+      "description": "Tại nước Anh thời hậu tận thế, đặc vụ bí ẩn chỉ được biết đến với tên Oberon giúp tạo ra một cuộc sống mới cho cư dân London. Phần tiếp theo của Maeve Thăng Thiên.",
+      "thumbnail": "oberons_legacy.jpg",
+      "available": false
+    },
+    {
+      "id": "B005",
+      "title": "Chén Thánh Phân Chia",
+      "page_count": 400,
+      "price": 5.95,
+      "amount": 0,
+      "publish_year": 2001,
+      "description": "Hai cô con gái của Maeve, hai chị em cùng cha khác mẹ, chiến đấu với nhau để giành quyền kiểm soát nước Anh. Phần tiếp theo của Di sản của Oberon.",
+      "thumbnail": "sundered_grail.jpg",
+      "available": false
+    },
+    {
+      "id": "B006",
+      "title": "Những chú chim tình nhân",
+      "page_count": 150,
+      "price": 4.95,
+      "amount": 15,
+      "publish_year": 2000,
+      "description": "Khi Carla gặp Paul tại một hội nghị nghiên cứu chim, căng thẳng tăng cao khi có xích mích.",
+      "thumbnail": "lover_birds.jpg",
+      "available": true
+    },
+    {
+      "id": "B007",
+      "title": "Tung tóe",
+      "page_count": 200,
+      "price": 4.95,
+      "amount": 8,
+      "publish_year": 2000,
+      "description": "Một thợ lặn biển sâu tìm thấy tình yêu đích thực hai mươi ngàn dặm dưới đáy biển.",
+      "thumbnail": "splish_splash.jpg",
+      "available": true
+    }
+  ]
+}
