@@ -1,0 +1,90 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "orders": [
+        {
+            "id": "O001",
+            "customer_id": "U001",
+            "customer_name": "Nguyễn Văn A",
+            "tel": "0123456789",
+            "order_date": "2024-06-15",
+            "status": "Đang xử lý",
+            "order_address": "123 Đường Hai Bà Trưng, Phường 1, Quận 1, TP. Hồ Chí Minh",
+            "payment_method": "Thẻ Tín dụng",
+            "discount": 10.4,
+            "total_amount": 150.75,
+            "note": "Vui lòng giao hàng trong khoảng từ 9 giờ sáng đến 5 giờ chiều."
+        },
+        {
+            "id": "O002",
+            "customer_id": "U002",
+            "customer_name": "Trần Thị B",
+            "tel": "0876543210",
+            "order_date": "2024-06-16",
+            "status": "Đã gửi hàng",
+            "order_address": "456 Phố Hàng Gai, Phường Hàng Gai, Quận Hoàn Kiếm, Hà Nội",
+            "payment_method": "PayPal",
+            "discount": 5.0,
+            "total_amount": 89.5
+        },
+        {
+            "id": "O003",
+            "customer_id": "U003",
+            "customer_name": "Lê Thị C",
+            "tel": "0123456789",
+            "order_date": "2024-06-17",
+            "status": "Đã giao hàng",
+            "order_address": "789 Đường Lê Lợi, Phường Vĩnh Ninh, TP. Huế",
+            "payment_method": "Thẻ Tín dụng",
+            "discount": 0.0,
+            "total_amount": 45.0
+        },
+        {
+            "id": "O004",
+            "customer_id": "U003",
+            "customer_name": "Phạm Văn D",
+            "tel": "0123456789",
+            "order_date": "2024-06-18",
+            "status": "Đã hủy",
+            "order_address": "321 Đường Trần Phú, Phường 4, TP. Đà Lạt",
+            "payment_method": "Thẻ Tín dụng",
+            "discount": 15.0,
+            "total_amount": 120.0
+        },
+        {
+            "id": "O005",
+            "customer_id": "U004",
+            "customer_name": "Hoàng Thị E",
+            "tel": "0123456789",
+            "order_date": "2024-06-19",
+            "status": "Đang xử lý",
+            "order_address": "654 Đường Nguyễn Tri Phương, Quận Hải Châu, TP. Đà Nẵng",
+            "payment_method": "Thẻ Tín dụng",
+            "discount": 10.0,
+            "total_amount": 75.25
+        },
+        {
+            "id": "O006",
+            "customer_id": "U005",
+            "customer_name": "Trương Văn G",
+            "tel": "0123456789",
+            "order_date": "2024-06-20",
+            "status": "Đang xử lý",
+            "order_address": "987 Đường Võ Nguyên Giáp, Phường Bãi Cháy, TP. Hạ Long",
+            "payment_method": "Thẻ Tín dụng",
+            "discount": 0.0,
+            "total_amount": 200.0
+        },
+        {
+            "id": "O007",
+            "customer_id": "U005",
+            "customer_name": "Mai Thị H",
+            "tel": "0123456789",
+            "order_date": "2024-06-21",
+            "status": "Đang xử lý",
+            "order_address": "123 Đường Quang Trung, Phường 10, TP. Cần Thơ",
+            "payment_method": "Thẻ Tín dụng",
+            "discount": 20.0,
+            "total_amount": 300.0
+        }
+    ]
+}

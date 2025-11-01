@@ -1,0 +1,80 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Orders Schema",
+    "type": "object",
+    "properties": {
+        "orders": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "customer_id": {
+                        "type": "string"
+                    },
+                    "customer_name": {
+                        "type": "string"
+                    },
+                    "tel": {
+                        "type": "string",
+                        "pattern": "^[0-9]{9,11}$"
+                    },
+                    "order_date": {
+                        "type": "string",
+                        "format": "date"
+                    },
+                    "status": {
+                        "type": "string",
+                        "enum": [
+                            "Đang xử lý",
+                            "Đã gửi hàng",
+                            "Đã giao hàng",
+                            "Đã hủy"
+                        ]
+                    },
+                    "order_address": {
+                        "type": "string"
+                    },
+                    "payment_method": {
+                        "type": "string",
+                        "enum": [
+                            "Thẻ Tín dụng",
+                            "PayPal",
+                            "Chuyển khoản",
+                            "Tiền mặt"
+                        ]
+                    },
+                    "discount": {
+                        "type": "number",
+                        "minimum": 0
+                    },
+                    "total_amount": {
+                        "type": "number",
+                        "minimum": 0
+                    },
+                    "note": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "id",
+                    "customer_id",
+                    "customer_name",
+                    "tel",
+                    "order_date",
+                    "status",
+                    "order_address",
+                    "payment_method",
+                    "discount",
+                    "total_amount"
+                ],
+                "additionalProperties": false
+            }
+        }
+    },
+    "required": [
+        "orders"
+    ]
+}
