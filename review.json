@@ -1,0 +1,61 @@
+{
+  "$schema": "./review.schema.json",
+  "reviews": [
+    {
+      "id": "RV001",
+      "book_id": "B001",
+      "user_id": "U005",
+      "rating": 5,
+      "comment": "Sản phẩm rất tốt!",
+      "date": "2024-06-15"
+    },
+    {
+      "id": "RV002",
+      "book_id": "B002",
+      "user_id": "U003",
+      "rating": 4,
+      "comment": "Chất lượng ổn, giao hàng nhanh.",
+      "date": "2024-06-15"
+    },
+    {
+      "id": "RV003",
+      "book_id": "B003",
+      "user_id": "U005",
+      "rating": 3,
+      "comment": "Sản phẩm bình thường, không có gì đặc biệt.",
+      "date": "2024-06-15"
+    },
+    {
+      "id": "RV004",
+      "book_id": "B004",
+      "user_id": "U003",
+      "rating": 2,
+      "comment": "Chất lượng không như mong đợi.",
+      "date": "2024-06-15"
+    },
+    {
+      "id": "RV005",
+      "book_id": "B005",
+      "user_id": "U002",
+      "rating": 1,
+      "comment": "Rất thất vọng với sản phẩm này.",
+      "date": "2024-06-15"
+    },
+    {
+      "id": "RV006",
+      "book_id": "B006",
+      "user_id": "U004",
+      "rating": 5,
+      "comment": "Tuyệt vời, sẽ mua lại!",
+      "date": "2024-06-15"
+    },
+    {
+      "id": "RV007",
+      "book_id": "B007",
+      "user_id": "U001",
+      "rating": 4,
+      "comment": "Hài lòng với sản phẩm.",
+      "date": "2024-06-15"
+    }
+  ]
+}

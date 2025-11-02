@@ -1,0 +1,68 @@
+{
+  "$schema": "./users.schema.json",
+  "users": [
+    {
+      "id": "U001",
+      "role_id": "R001",
+      "username": "Lại Trần Thế Vinh",
+      "password": "12345",
+      "numberphone": "0907435567",
+      "email": "vinhltth@gmail.com",
+      "gender": "Nam"
+    },
+    {
+      "id": "U002",
+      "role_id": "R002",
+      "username": "Võ Quốc Việt",
+      "password": "12345",
+      "numberphone": "0907313461",
+      "email": "vietvq@gmail.com",
+      "gender": "Nam"
+    },
+    {
+      "id": "U003",
+      "role_id": "R003",
+      "username": "Dương Thành Trí",
+      "password": "12345",
+      "numberphone": "0907313462",
+      "email": "dtt@gmail.com",
+      "gender": "Nam"
+    },
+    {
+      "id": "U004",
+      "role_id": "R004",
+      "username": "Danh Nhật Tiến",
+      "password": "12345",
+      "numberphone": "0907313463",
+      "email": "dnt@gmail.com",
+      "gender": "Nam"
+    },
+    {
+      "id": "U005",
+      "role_id": "R004",
+      "username": "Trần Quang Minh",
+      "password": "12345",
+      "numberphone": "0907313464",
+      "email": "cqm@gmail.com",
+      "gender": "Nam"
+    },
+    {
+      "id": "U006",
+      "role_id": "R004",
+      "username": "Nguyễn Thị Hồng Nhung",
+      "password": "12345",
+      "numberphone": "0907313465",
+      "email": "nhung@gmail.com",
+      "gender": "Nữ"
+    },
+    {
+      "id": "U007",
+      "role_id": "R004",
+      "username": "Phạm Thị Thu Hương",
+      "password": "12345",
+      "numberphone": "0907313466",
+      "email": "thuong@gmail.com",
+      "gender": "Nữ"
+    }
+  ]
+}
