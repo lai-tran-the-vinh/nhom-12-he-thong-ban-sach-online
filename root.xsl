@@ -99,6 +99,58 @@
           </xsl:for-each>
         </table>
         <!-- Quốc Việt -->
+        <h2>Tổng đơn hàng và chi phí của người dùng</h2>
+        <table border="1">
+          <tr>
+            <th>Mã người dùng</th>
+            <th>Tên</th>
+            <th>Số đơn hàng</th>
+            <th>Tổng tiền đã chi</th>
+          </tr>
+          <xsl:for-each select="root/users/user">
+            <xsl:variable name="user_id" select="@id"/>
+            <xsl:variable name="orders" select="/root/orders/order[@customer_id=$user_id]"/>
+            <tr>
+              <td><xsl:value-of select="@id"/></td>
+              <td><xsl:value-of select="username"/></td>
+              <td><xsl:value-of select="count($orders)"/></td>
+              <td>
+                <xsl:choose>
+                  <xsl:when test="count($orders) &gt; 0">
+                    <xsl:value-of select="format-number(sum($orders/total_amount), '#.00')"/>
+                  </xsl:when>
+                  <xsl:otherwise>0</xsl:otherwise>
+                </xsl:choose>
+              </td>
+            </tr>
+          </xsl:for-each>
+        </table>
+        <h2>Tổng review và điểm trung bình của người dùng</h2>
+        <table border="1">
+          <tr>
+            <th>Mã người dùng</th>
+            <th>Tên</th>
+            <th>Số review</th>
+            <th>Điểm trung bình</th>
+          </tr>
+          <xsl:for-each select="root/users/user">
+            <xsl:variable name="user_id" select="@id"/>
+            <xsl:variable name="reviews" select="/root/reviews/review[@user_id=$user_id]"/>
+            <tr>
+              <td><xsl:value-of select="@id"/></td>
+              <td><xsl:value-of select="username"/></td>
+              <td><xsl:value-of select="count($reviews)"/></td>
+              <td>
+                <xsl:choose>
+                  <xsl:when test="count($reviews) &gt; 0">
+                    <xsl:value-of select="format-number(sum($reviews/rating) div count($reviews), '#.00')"/>
+                  </xsl:when>
+                  <xsl:otherwise>0</xsl:otherwise>
+                </xsl:choose>
+              </td>
+            </tr>
+          </xsl:for-each>
+        </table>
 
       </body>
     </html>
