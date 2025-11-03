@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-
   <xsl:template match="/">
     <html>
       <body>
@@ -27,7 +26,6 @@
             </tr>
           </xsl:for-each>
         </table>
-
         <h2>Số lượng sách theo thể loại</h2>
         <table border="1">
           <tr>
@@ -46,7 +44,6 @@
             </tr>
           </xsl:for-each>
         </table>
-
         <!-- Thành Trí -->
         <h2>Sách thể loại tình cảm</h2>
         <table border="1">
@@ -72,7 +69,6 @@
             </xsl:for-each>
           </xsl:for-each>
         </table>
-
         <h2>Sách của tác giả Lê Nhật Thiên</h2>
         <table border="1">
           <tr>
@@ -107,20 +103,23 @@
             <th>Số đơn hàng</th>
             <th>Tổng tiền đã chi</th>
           </tr>
+          <!-- Lặp qua từng user -->
           <xsl:for-each select="root/users/user">
-            <xsl:variable name="user_id" select="@id"/>
-            <xsl:variable name="orders" select="/root/orders/order[@customer_id=$user_id]"/>
             <tr>
-              <td><xsl:value-of select="@id"/></td>
-              <td><xsl:value-of select="username"/></td>
-              <td><xsl:value-of select="count($orders)"/></td>
               <td>
-                <xsl:choose>
-                  <xsl:when test="count($orders) &gt; 0">
-                    <xsl:value-of select="format-number(sum($orders/total_amount), '#.00')"/>
-                  </xsl:when>
-                  <xsl:otherwise>0</xsl:otherwise>
-                </xsl:choose>
+                <xsl:value-of select="@id"/>
+              </td>
+              <td>
+                <xsl:value-of select="username"/>
+              </td>
+              <!-- Đếm số đơn hàng -->
+              <td>
+                <xsl:value-of select="count(/root/orders/order[@customer_id=current()/@id])"/>
+              </td>
+              <!-- Tính tổng tiền -->
+              <td>
+                <xsl:variable name="total" select="sum(/root/orders/order[@customer_id=current()/@id]/total_amount)"/>
+                <xsl:value-of select="format-number($total, '#.00')"/>
               </td>
             </tr>
           </xsl:for-each>
@@ -134,26 +133,33 @@
             <th>Điểm trung bình</th>
           </tr>
           <xsl:for-each select="root/users/user">
-            <xsl:variable name="user_id" select="@id"/>
-            <xsl:variable name="reviews" select="/root/reviews/review[@user_id=$user_id]"/>
+            <xsl:variable name="reviews" select="/root/reviews/review[@user_id=current()/@id]"/>
+            <xsl:variable name="reviewCount" select="count($reviews)"/>
             <tr>
-              <td><xsl:value-of select="@id"/></td>
-              <td><xsl:value-of select="username"/></td>
-              <td><xsl:value-of select="count($reviews)"/></td>
+              <td>
+                <xsl:value-of select="@id"/>
+              </td>
+              <td>
+                <xsl:value-of select="username"/>
+              </td>
+              <td>
+                <xsl:value-of select="$reviewCount"/>
+              </td>
               <td>
                 <xsl:choose>
-                  <xsl:when test="count($reviews) &gt; 0">
-                    <xsl:value-of select="format-number(sum($reviews/rating) div count($reviews), '#.00')"/>
+                  <xsl:when test="$reviewCount > 0">
+                    <xsl:variable name="avg" select="sum($reviews/rating) div $reviewCount"/>
+                    <xsl:value-of select="format-number($avg, '#.00')"/>
                   </xsl:when>
-                  <xsl:otherwise>0</xsl:otherwise>
+                  <xsl:otherwise>
+                    <xsl:value-of select="format-number(0, '#.00')"/>
+                  </xsl:otherwise>
                 </xsl:choose>
               </td>
             </tr>
           </xsl:for-each>
         </table>
-
       </body>
     </html>
   </xsl:template>
-
 </xsl:stylesheet>
