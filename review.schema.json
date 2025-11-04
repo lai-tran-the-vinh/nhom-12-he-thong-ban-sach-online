@@ -8,16 +8,44 @@
       "items": {
         "type": "object",
         "properties": {
-          "id": { "type": "string", "maxLength": 20 },
-          "book_id": { "type": "string", "maxLength": 20 },
-          "user_id": { "type": "string", "maxLength": 20 },
-          "rating": { "type": "integer", "minimum": 1, "maximum": 5 },
-          "comment": { "type": "string", "maxLength": 500 },
-          "date": { "type": "string", "format": "date" }
+          "id": {
+            "type": "string",
+            "pattern": "^RV\\d{3}$"
+          },
+          "book_id": {
+            "type": "string",
+            "maxLength": 20
+          },
+          "user_id": {
+            "type": "string",
+            "maxLength": 20
+          },
+          "rating": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "comment": {
+            "type": "string",
+            "maxLength": 500
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          }
         },
-        "required": ["id", "book_id", "user_id", "rating", "comment", "date"]
+        "required": [
+          "id",
+          "book_id",
+          "user_id",
+          "rating",
+          "comment",
+          "date"
+        ]
       }
     }
   },
-  "required": ["reviews"]
+  "required": [
+    "reviews"
+  ]
 }

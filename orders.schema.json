@@ -9,10 +9,12 @@
                 "type": "object",
                 "properties": {
                     "id": {
-                        "type": "string"
+                        "type": "string",
+                        "pattern": "^O\\d{3}$"
                     },
                     "customer_id": {
-                        "type": "string"
+                        "type": "string",
+                        "pattern": "^U\\d{3}$"
                     },
                     "customer_name": {
                         "type": "string"

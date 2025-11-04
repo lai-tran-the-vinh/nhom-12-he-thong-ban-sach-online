@@ -7,13 +7,37 @@
       "items": {
         "type": "object",
         "properties": {
-          "id": { "type": "string", "maxLength": 20 },
-          "role_id": { "type": "string", "maxLength": 20 },
-          "username": { "type": "string", "maxLength": 50 },
-          "password": { "type": "string" },
-          "numberphone": { "type": "string", "pattern": "0\\d{9}" },
-          "email": { "type": "string", "format": "email" },
-          "gender": { "type": "string", "enum": ["Nam", "Nữ", "Khác"] }
+          "id": {
+            "type": "string",
+            "pattern": "^U\\d{3}$"
+          },
+          "role_id": {
+            "type": "string",
+            "pattern": "^R\\d{3}$"
+          },
+          "username": {
+            "type": "string",
+            "maxLength": 50
+          },
+          "password": {
+            "type": "string"
+          },
+          "numberphone": {
+            "type": "string",
+            "pattern": "0\\d{9}"
+          },
+          "email": {
+            "type": "string",
+            "format": "email"
+          },
+          "gender": {
+            "type": "string",
+            "enum": [
+              "Nam",
+              "Nữ",
+              "Khác"
+            ]
+          }
         },
         "required": [
           "id",
@@ -27,5 +51,7 @@
       }
     }
   },
-  "required": ["users"]
+  "required": [
+    "users"
+  ]
 }
