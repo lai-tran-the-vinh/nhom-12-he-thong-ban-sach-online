@@ -20,8 +20,18 @@
                 <xsl:value-of select="customer_name" />
               </td>
               <td>
-                <xsl:value-of
-                  select="format-number(total_amount - (total_amount * discount div 100), '#.00')" />
+                <xsl:choose>
+                  <!-- Nếu có giảm giá -->
+                  <xsl:when test="discount">
+                    <xsl:value-of
+                      select="format-number(total_amount - (total_amount * discount div 100), '#.00')" />
+                  </xsl:when>
+                  
+                  <!-- Nếu không có giảm giá -->
+                  <xsl:otherwise>
+                    <xsl:value-of select="format-number(total_amount, '#.00')" />
+                  </xsl:otherwise>
+                </xsl:choose>
               </td>
             </tr>
           </xsl:for-each>
