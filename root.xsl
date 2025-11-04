@@ -119,7 +119,7 @@
               <!-- Tính tổng tiền -->
               <td>
                 <xsl:variable name="total" select="sum(/root/orders/order[@customer_id=current()/@id]/total_amount)"/>
-                <xsl:value-of select="format-number($total, '#.00')"/>
+                <xsl:value-of select="format-number($total, '')"/>
               </td>
             </tr>
           </xsl:for-each>
@@ -152,7 +152,7 @@
                     <xsl:value-of select="format-number($avg, '#.00')"/>
                   </xsl:when>
                   <xsl:otherwise>
-                    <xsl:value-of select="format-number(0, '#.00')"/>
+                    <xsl:value-of select="format-number(0, '')"/>
                   </xsl:otherwise>
                 </xsl:choose>
               </td>
